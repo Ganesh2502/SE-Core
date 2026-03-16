@@ -10,7 +10,6 @@
         .bg-secore-blue { background-color: #0047AB; }
         .text-secore-blue { color: #0047AB; }
         
-        /* Smooth Scrolling Client Bar Animation */
         @keyframes scroll {
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
@@ -18,19 +17,23 @@
         .logo-slider-container {
             display: flex;
             width: 200%; 
-            animation: scroll 25s linear infinite;
+            animation: scroll 30s linear infinite;
         }
         .logo-item {
-            width: 200px;
+            width: 220px;
             flex-shrink: 0;
             display: flex;
             justify-content: center;
-            filter: grayscale(100%);
-            opacity: 0.7;
+            align-items: center;
+            padding: 0 30px;
             transition: 0.3s;
         }
-        .logo-item:hover { filter: grayscale(0%); opacity: 1; }
-        .logo-item img { height: 35px; object-fit: contain; }
+        .logo-item img { 
+            max-height: 45px; 
+            width: auto; 
+            object-fit: contain;
+            filter: brightness(1) contrast(1);
+        }
 
         html { scroll-behavior: smooth; }
         #submit-btn { display: none; }
@@ -41,11 +44,9 @@
     <header class="bg-white shadow-sm sticky top-0 z-50">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center">
-                <div class="text-2xl font-black tracking-tighter text-secore-blue">
+                <img src="logo.png" alt="SE CORE" class="h-12 w-auto mr-3">
+                <div class="hidden md:block text-2xl font-black tracking-tighter text-secore-blue">
                     SE<span class="text-gray-700">CORE</span>
-                </div>
-                <div class="ml-3 pl-3 border-l border-gray-300 text-[10px] uppercase tracking-widest leading-tight text-gray-500 font-bold">
-                    Business<br>Solutions
                 </div>
             </div>
             <nav class="hidden md:flex space-x-8 text-sm font-bold uppercase tracking-wide">
@@ -58,69 +59,59 @@
         </div>
     </header>
 
-    <section class="relative bg-slate-900 h-[550px] flex items-center overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80" class="absolute inset-0 w-full h-full object-cover opacity-30" alt="Business Solutions">
+    <section class="relative bg-slate-900 h-[500px] flex items-center overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80" class="absolute inset-0 w-full h-full object-cover opacity-40" alt="Corporate background">
         <div class="container mx-auto px-6 relative z-10 text-white">
-            <h1 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
-                Audit & Deployment <br><span class="text-blue-400 font-light">Across South India</span>
-            </h1>
-            <p class="text-lg md:text-xl max-w-2xl mb-10 text-gray-300">
-                Strategic solutions in Auditing, Visual Merchandising, and Professional Manpower.
-            </p>
-            <div class="flex flex-wrap gap-4">
-                <a href="#services" class="bg-blue-600 hover:bg-blue-700 px-10 py-4 rounded-lg font-bold transition shadow-lg shadow-blue-900/50">Explore Services</a>
-                <a href="#join" class="bg-white text-gray-900 px-10 py-4 rounded-lg font-bold hover:bg-gray-100 transition">Work With Us</a>
-            </div>
+            <h1 class="text-5xl font-extrabold mb-6">Strategic Audit & Deployment</h1>
+            <p class="text-xl max-w-2xl mb-10 text-gray-200">Excellence in Auditing, Visual Merchandising, and Professional Manpower across South India.</p>
+            <a href="#join" class="bg-blue-600 hover:bg-blue-700 px-10 py-4 rounded-lg font-bold transition">Get Started</a>
         </div>
     </section>
 
-    <section class="py-12 bg-white border-b border-gray-100 overflow-hidden">
-        <div class="container mx-auto px-6 mb-8 text-center">
-            <p class="text-xs font-black uppercase tracking-[0.2em] text-gray-400">Trusted by Industry Leaders</p>
+    <section class="py-16 bg-white border-b overflow-hidden">
+        <div class="container mx-auto px-6 mb-10 text-center">
+            <p class="text-xs font-black uppercase tracking-[0.3em] text-gray-400">Our Trusted Partners</p>
         </div>
         <div class="relative">
             <div class="logo-slider-container">
-                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Panasonic_logo.svg" alt="Panasonic"></div>
                 <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg" alt="Samsung"></div>
-                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon"></div>
-                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Tata_logo.svg" alt="Tata"></div>
-                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Walmart_Logo.svg" alt="Walmart"></div>
-                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Panasonic_logo.svg" alt="Panasonic"></div>
+                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Airtel_logo.svg" alt="Airtel"></div>
+                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Motorola_logo.svg" alt="Motorola"></div>
+                <div class="logo-item"><img src="https://www.lenovo.com/content/dam/lenovo/global/layout/header/lenovo-logo-red.svg" alt="Lenovo"></div>
+                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Apollo_Hospitals_Logo.svg" alt="Apollo"></div>
+                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Lenskart_logo.svg" alt="Lenskart"></div>
+                <div class="logo-item"><img src="https://www.giva.co/cdn/shop/files/giva-logo.svg?v=1614330102" alt="Giva" style="filter:invert(1)"></div>
+                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Usha_International_Logo.svg" alt="Usha"></div>
+                
                 <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg" alt="Samsung"></div>
-                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon"></div>
-                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Tata_logo.svg" alt="Tata"></div>
-                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Walmart_Logo.svg" alt="Walmart"></div>
+                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Airtel_logo.svg" alt="Airtel"></div>
+                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Motorola_logo.svg" alt="Motorola"></div>
+                <div class="logo-item"><img src="https://www.lenovo.com/content/dam/lenovo/global/layout/header/lenovo-logo-red.svg" alt="Lenovo"></div>
+                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Apollo_Hospitals_Logo.svg" alt="Apollo"></div>
+                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Lenskart_logo.svg" alt="Lenskart"></div>
+                <div class="logo-item"><img src="https://www.giva.co/cdn/shop/files/giva-logo.svg?v=1614330102" alt="Giva" style="filter:invert(1)"></div>
+                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Usha_International_Logo.svg" alt="Usha"></div>
             </div>
         </div>
     </section>
 
     <section id="services" class="py-24 bg-gray-50">
         <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Service Offerings</h2>
-                <div class="w-20 h-1.5 bg-blue-600 mx-auto"></div>
-            </div>
             <div class="grid md:grid-cols-3 gap-10">
                 <div class="bg-white p-10 rounded-2xl shadow-sm border border-gray-100 hover:border-blue-500 transition-all group">
-                    <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition">
-                        <i class="fa-solid fa-clipboard-check"></i>
-                    </div>
+                    <i class="fa-solid fa-clipboard-check text-3xl text-blue-600 mb-6 block"></i>
                     <h3 class="text-2xl font-bold mb-4">Audits</h3>
-                    <p class="text-gray-600 leading-relaxed">External audits, stock verification, and compliance checks with 100% accuracy.</p>
+                    <p class="text-gray-600">Comprehensive stock verification and compliance auditing with real-time reporting.</p>
                 </div>
                 <div class="bg-white p-10 rounded-2xl shadow-sm border border-gray-100 hover:border-blue-500 transition-all group">
-                    <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition">
-                        <i class="fa-solid fa-layer-group"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">Visual Merchandise</h3>
-                    <p class="text-gray-600 leading-relaxed">POSM deployment and brand display setup to ensure your brand stands out.</p>
+                    <i class="fa-solid fa-layer-group text-3xl text-blue-600 mb-6 block"></i>
+                    <h3 class="text-2xl font-bold mb-4">Visual Merchandising</h3>
+                    <p class="text-gray-600">End-to-end POSM deployment and high-impact brand display management.</p>
                 </div>
                 <div class="bg-white p-10 rounded-2xl shadow-sm border border-gray-100 hover:border-blue-500 transition-all group">
-                    <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition">
-                        <i class="fa-solid fa-user-tie"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">Man Power</h3>
-                    <p class="text-gray-600 leading-relaxed">Skilled field teams and experienced manpower deployment for organizational projects.</p>
+                    <i class="fa-solid fa-user-tie text-3xl text-blue-600 mb-6 block"></i>
+                    <h3 class="text-2xl font-bold mb-4">Manpower</h3>
+                    <p class="text-gray-600">Deployment of skilled field teams and specialized personnel for large-scale operations.</p>
                 </div>
             </div>
         </div>
@@ -128,73 +119,54 @@
 
     <section id="team" class="py-24 bg-white">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Leadership</h2>
-            <div class="w-20 h-1.5 bg-blue-600 mx-auto mb-16"></div>
-            <div class="grid md:grid-cols-3 gap-10">
-                <div class="text-center group">
-                    <div class="w-48 h-48 mx-auto mb-6 overflow-hidden rounded-2xl border-4 border-gray-100 group-hover:border-blue-500 transition-all shadow-lg">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=400&h=400" alt="Shiva Ellandula" class="w-full h-full object-cover">
+            <h2 class="text-4xl font-bold mb-16">Our Leadership</h2>
+            <div class="grid md:grid-cols-3 gap-16">
+                <div>
+                    <div class="w-48 h-48 bg-gray-200 rounded-full mx-auto mb-6 flex items-center justify-center overflow-hidden border-4 border-gray-50 shadow-lg">
+                        <img src="team1.jpg" alt="Member" class="w-full h-full object-cover opacity-50 bg-slate-100">
                     </div>
                     <h4 class="text-xl font-bold">Shiva Ellandula</h4>
-                    <p class="text-blue-600 font-medium">Founder</p>
+                    <p class="text-blue-600 font-bold uppercase text-xs tracking-widest mt-1">Founder</p>
                 </div>
-                <div class="text-center group">
-                    <div class="w-48 h-48 mx-auto mb-6 overflow-hidden rounded-2xl border-4 border-gray-100 group-hover:border-blue-500 transition-all shadow-lg">
-                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?fit=crop&w=400&h=400" alt="Sabeena Begum" class="w-full h-full object-cover">
+                <div>
+                    <div class="w-48 h-48 bg-gray-200 rounded-full mx-auto mb-6 flex items-center justify-center overflow-hidden border-4 border-gray-50 shadow-lg">
+                        <img src="team2.jpg" alt="Member" class="w-full h-full object-cover opacity-50 bg-slate-100">
                     </div>
                     <h4 class="text-xl font-bold">Sabeena Begum</h4>
-                    <p class="text-blue-600 font-medium">Project Lead</p>
+                    <p class="text-blue-600 font-bold uppercase text-xs tracking-widest mt-1">Project Lead</p>
                 </div>
-                <div class="text-center group">
-                    <div class="w-48 h-48 mx-auto mb-6 overflow-hidden rounded-2xl border-4 border-gray-100 group-hover:border-blue-500 transition-all shadow-lg">
-                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?fit=crop&w=400&h=400" alt="Ganesh Keta" class="w-full h-full object-cover">
+                <div>
+                    <div class="w-48 h-48 bg-gray-200 rounded-full mx-auto mb-6 flex items-center justify-center overflow-hidden border-4 border-gray-50 shadow-lg">
+                        <img src="team3.jpg" alt="Member" class="w-full h-full object-cover opacity-50 bg-slate-100">
                     </div>
                     <h4 class="text-xl font-bold">Ganesh Keta</h4>
-                    <p class="text-blue-600 font-medium">Consultant</p>
+                    <p class="text-blue-600 font-bold uppercase text-xs tracking-widest mt-1">Consultant</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="join" class="py-24 bg-gray-50">
-        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-16">
-            <div class="md:w-1/2">
-                <h2 class="text-4xl font-bold mb-6 text-gray-900">Join Our Team</h2>
-                <p class="text-gray-600 text-lg mb-8 italic">"Building the future of business services."</p>
-                <div class="space-y-6">
-                    <div class="flex items-start">
-                        <div class="bg-green-100 text-green-600 p-2 rounded-lg mr-4"><i class="fa-solid fa-check"></i></div>
-                        <div><h4 class="font-bold">Flexible Work</h4></div>
-                    </div>
-                    <div class="flex items-start">
-                        <div class="bg-green-100 text-green-600 p-2 rounded-lg mr-4"><i class="fa-solid fa-check"></i></div>
-                        <div><h4 class="font-bold">Prompt Payments</h4></div>
-                    </div>
+        <div class="container mx-auto px-6 max-w-2xl bg-white p-12 rounded-[2.5rem] shadow-2xl border border-gray-100">
+            <h3 class="text-3xl font-bold mb-10 text-center">Registration Form</h3>
+            <form id="registration-form" class="space-y-6">
+                <input type="text" name="Name" placeholder="Full Name" required class="w-full p-5 rounded-2xl border border-gray-200 focus:ring-2 focus:ring-blue-500 outline-none transition-all">
+                <input type="tel" name="Contact" placeholder="Contact Number" required class="w-full p-5 rounded-2xl border border-gray-200 focus:ring-2 focus:ring-blue-500 outline-none transition-all">
+                <div class="grid grid-cols-2 gap-6">
+                    <input type="text" name="City" placeholder="City" required class="w-full p-5 rounded-2xl border border-gray-200 focus:ring-2 focus:ring-blue-500 outline-none transition-all">
+                    <input type="text" name="State" placeholder="State" required class="w-full p-5 rounded-2xl border border-gray-200 focus:ring-2 focus:ring-blue-500 outline-none transition-all">
                 </div>
-            </div>
-            <div class="md:w-1/2 w-full bg-white p-8 md:p-12 rounded-3xl border border-gray-200 shadow-xl">
-                <h3 class="text-2xl font-bold mb-8 text-center text-gray-800">Registration Form</h3>
-                <form id="registration-form" class="space-y-5">
-                    <input type="text" name="Name" placeholder="Full Name" required class="w-full p-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none">
-                    <input type="tel" name="Contact" placeholder="Contact Number" required class="w-full p-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none">
-                    <div class="grid grid-cols-2 gap-4">
-                        <input type="text" name="City" placeholder="City" required class="w-full p-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none">
-                        <input type="text" name="State" placeholder="State" required class="w-full p-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none">
-                    </div>
-                    <button type="submit" id="submit-btn" class="w-full bg-secore-blue text-white font-black py-4 rounded-xl hover:bg-blue-800 transition uppercase tracking-widest mt-4">Submit Application</button>
-                    <p id="status-message" class="text-center text-sm font-bold mt-4"></p>
-                </form>
-            </div>
+                <button type="submit" id="submit-btn" class="w-full bg-secore-blue text-white font-black py-5 rounded-2xl hover:bg-blue-800 transition-all uppercase tracking-[0.2em] shadow-lg">Submit Application</button>
+                <p id="status-msg" class="text-center text-sm font-bold mt-4"></p>
+            </form>
         </div>
     </section>
 
-    <footer class="bg-gray-900 text-gray-400 py-16">
-        <div class="container mx-auto px-6 text-center">
-            <div class="text-xl font-bold text-white mb-6 uppercase tracking-widest">SE CORE Business Solutions</div>
-            <p class="mb-8">Head Office: Hyderabad, Telangana</p>
-            <div class="border-t border-gray-800 pt-8 text-xs">
-                &copy; 2026 SE CORE BUSINESS SOLUTIONS.
-            </div>
+    <footer class="bg-gray-900 text-gray-500 py-16 text-center">
+        <p class="text-white font-black uppercase tracking-widest mb-4">SE CORE Business Solutions</p>
+        <p class="text-sm">Head Office: Hyderabad, Telangana</p>
+        <div class="mt-10 pt-10 border-t border-gray-800 text-xs">
+            &copy; 2026 SE CORE. Strategic Excellence Delivered.
         </div>
     </footer>
 
@@ -202,7 +174,7 @@
         const scriptURL = 'https://script.google.com/macros/s/AKfycbzWlURgg9_4xi1KqMketn9arl3bSWJaNQ5AOwGCHee5dCSVjXyLSZtUBE3qOZWJ_6J4ww/exec';
         const form = document.getElementById('registration-form');
         const submitBtn = document.getElementById('submit-btn');
-        const statusMsg = document.getElementById('status-message');
+        const statusMsg = document.getElementById('status-msg');
         const inputs = form.querySelectorAll('input[required]');
 
         form.addEventListener('input', () => {
@@ -214,20 +186,18 @@
         form.addEventListener('submit', e => {
             e.preventDefault();
             submitBtn.disabled = true;
-            submitBtn.innerText = "Submitting...";
-            statusMsg.innerText = "Processing...";
-
+            submitBtn.innerText = "SUBMITTING...";
+            
             fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                 .then(response => {
-                    statusMsg.innerText = "Success! Details recorded.";
-                    statusMsg.className = "text-center text-sm font-bold mt-4 text-green-600";
+                    statusMsg.innerText = "SUCCESS! YOUR DETAILS ARE SAVED.";
+                    statusMsg.className = "text-center text-sm font-bold mt-4 text-green-500";
                     form.reset();
                     submitBtn.style.display = 'none';
-                    submitBtn.disabled = false;
                 })
                 .catch(error => {
-                    statusMsg.innerText = "Error. Please check connection.";
-                    statusMsg.className = "text-center text-sm font-bold mt-4 text-red-600";
+                    statusMsg.innerText = "ERROR! PLEASE CHECK YOUR CONNECTION.";
+                    statusMsg.className = "text-center text-sm font-bold mt-4 text-red-500";
                     submitBtn.disabled = false;
                 });
         });
