@@ -10,13 +10,14 @@
         .bg-secore-blue { background-color: #0047AB; }
         .text-secore-blue { color: #0047AB; }
         
+        /* Smooth Scrolling Client Bar Animation */
         @keyframes scroll {
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
         }
         .logo-slider-container {
             display: flex;
-            width: 200%;
+            width: 200%; 
             animation: scroll 25s linear infinite;
         }
         .logo-item {
@@ -64,11 +65,31 @@
                 Audit & Deployment <br><span class="text-blue-400 font-light">Across South India</span>
             </h1>
             <p class="text-lg md:text-xl max-w-2xl mb-10 text-gray-300">
-                Strategic solutions in Auditing, Visual Merchandising, and Professional Manpower. Trusted by India's biggest brands for excellence and reliability.
+                Strategic solutions in Auditing, Visual Merchandising, and Professional Manpower.
             </p>
             <div class="flex flex-wrap gap-4">
                 <a href="#services" class="bg-blue-600 hover:bg-blue-700 px-10 py-4 rounded-lg font-bold transition shadow-lg shadow-blue-900/50">Explore Services</a>
                 <a href="#join" class="bg-white text-gray-900 px-10 py-4 rounded-lg font-bold hover:bg-gray-100 transition">Work With Us</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-12 bg-white border-b border-gray-100 overflow-hidden">
+        <div class="container mx-auto px-6 mb-8 text-center">
+            <p class="text-xs font-black uppercase tracking-[0.2em] text-gray-400">Trusted by Industry Leaders</p>
+        </div>
+        <div class="relative">
+            <div class="logo-slider-container">
+                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Panasonic_logo.svg" alt="Panasonic"></div>
+                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg" alt="Samsung"></div>
+                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon"></div>
+                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Tata_logo.svg" alt="Tata"></div>
+                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Walmart_Logo.svg" alt="Walmart"></div>
+                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Panasonic_logo.svg" alt="Panasonic"></div>
+                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg" alt="Samsung"></div>
+                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon"></div>
+                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b1/Tata_logo.svg" alt="Tata"></div>
+                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Walmart_Logo.svg" alt="Walmart"></div>
             </div>
         </div>
     </section>
@@ -85,32 +106,30 @@
                         <i class="fa-solid fa-clipboard-check"></i>
                     </div>
                     <h3 class="text-2xl font-bold mb-4">Audits</h3>
-                    <p class="text-gray-600 leading-relaxed">External audits, stock verification, and compliance checks with 100% accuracy and fast reporting.</p>
+                    <p class="text-gray-600 leading-relaxed">External audits, stock verification, and compliance checks with 100% accuracy.</p>
                 </div>
                 <div class="bg-white p-10 rounded-2xl shadow-sm border border-gray-100 hover:border-blue-500 transition-all group">
                     <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition">
                         <i class="fa-solid fa-layer-group"></i>
                     </div>
                     <h3 class="text-2xl font-bold mb-4">Visual Merchandise</h3>
-                    <p class="text-gray-600 leading-relaxed">POSM deployment and brand display setup to ensure your brand stands out in every retail outlet.</p>
+                    <p class="text-gray-600 leading-relaxed">POSM deployment and brand display setup to ensure your brand stands out.</p>
                 </div>
                 <div class="bg-white p-10 rounded-2xl shadow-sm border border-gray-100 hover:border-blue-500 transition-all group">
                     <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition">
                         <i class="fa-solid fa-user-tie"></i>
                     </div>
                     <h3 class="text-2xl font-bold mb-4">Man Power</h3>
-                    <p class="text-gray-600 leading-relaxed">Skilled field teams and experienced manpower deployment for large-scale organizational projects.</p>
+                    <p class="text-gray-600 leading-relaxed">Skilled field teams and experienced manpower deployment for organizational projects.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section id="team" class="py-24 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Leadership</h2>
-                <div class="w-20 h-1.5 bg-blue-600 mx-auto"></div>
-            </div>
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Leadership</h2>
+            <div class="w-20 h-1.5 bg-blue-600 mx-auto mb-16"></div>
             <div class="grid md:grid-cols-3 gap-10">
                 <div class="text-center group">
                     <div class="w-48 h-48 mx-auto mb-6 overflow-hidden rounded-2xl border-4 border-gray-100 group-hover:border-blue-500 transition-all shadow-lg">
@@ -140,39 +159,27 @@
     <section id="join" class="py-24 bg-gray-50">
         <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-16">
             <div class="md:w-1/2">
-                <h2 class="text-4xl font-bold mb-6">Join Our Team as a <span class="text-blue-600">Freelancer</span></h2>
-                <p class="text-gray-600 text-lg mb-8 italic">"Building the future of business services, one partner at a time."</p>
+                <h2 class="text-4xl font-bold mb-6 text-gray-900">Join Our Team</h2>
+                <p class="text-gray-600 text-lg mb-8 italic">"Building the future of business services."</p>
                 <div class="space-y-6">
                     <div class="flex items-start">
                         <div class="bg-green-100 text-green-600 p-2 rounded-lg mr-4"><i class="fa-solid fa-check"></i></div>
-                        <div><h4 class="font-bold">Flexible Work</h4><p class="text-sm text-gray-500">Work on projects in your own city.</p></div>
+                        <div><h4 class="font-bold">Flexible Work</h4></div>
                     </div>
                     <div class="flex items-start">
                         <div class="bg-green-100 text-green-600 p-2 rounded-lg mr-4"><i class="fa-solid fa-check"></i></div>
-                        <div><h4 class="font-bold">Prompt Payments</h4><p class="text-sm text-gray-500">Secure and timely payouts for every completed task.</p></div>
+                        <div><h4 class="font-bold">Prompt Payments</h4></div>
                     </div>
                 </div>
             </div>
-            <div class="md:w-1/2 w-full bg-gray-50 p-8 md:p-12 rounded-3xl border border-gray-200 shadow-xl">
+            <div class="md:w-1/2 w-full bg-white p-8 md:p-12 rounded-3xl border border-gray-200 shadow-xl">
                 <h3 class="text-2xl font-bold mb-8 text-center text-gray-800">Registration Form</h3>
                 <form id="registration-form" class="space-y-5">
-                    <div>
-                        <label class="block text-xs font-black uppercase text-gray-400 mb-2">Full Name</label>
-                        <input type="text" name="Name" placeholder="Your Name" required class="w-full p-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-black uppercase text-gray-400 mb-2">Contact Number</label>
-                        <input type="tel" name="Contact" placeholder="+91 XXXXX XXXXX" required class="w-full p-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none">
-                    </div>
+                    <input type="text" name="Name" placeholder="Full Name" required class="w-full p-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none">
+                    <input type="tel" name="Contact" placeholder="Contact Number" required class="w-full p-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none">
                     <div class="grid grid-cols-2 gap-4">
-                        <div>
-                            <label class="block text-xs font-black uppercase text-gray-400 mb-2">City</label>
-                            <input type="text" name="City" placeholder="Ameerpet" required class="w-full p-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-black uppercase text-gray-400 mb-2">State</label>
-                            <input type="text" name="State" placeholder="Telangana" required class="w-full p-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none">
-                        </div>
+                        <input type="text" name="City" placeholder="City" required class="w-full p-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none">
+                        <input type="text" name="State" placeholder="State" required class="w-full p-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none">
                     </div>
                     <button type="submit" id="submit-btn" class="w-full bg-secore-blue text-white font-black py-4 rounded-xl hover:bg-blue-800 transition uppercase tracking-widest mt-4">Submit Application</button>
                     <p id="status-message" class="text-center text-sm font-bold mt-4"></p>
@@ -184,9 +191,9 @@
     <footer class="bg-gray-900 text-gray-400 py-16">
         <div class="container mx-auto px-6 text-center">
             <div class="text-xl font-bold text-white mb-6 uppercase tracking-widest">SE CORE Business Solutions</div>
-            <p class="mb-8">Head Office: 4th Floor, Covibe Workstation, Near Metro Station, Ameerpet, Hyderabad</p>
+            <p class="mb-8">Head Office: Hyderabad, Telangana</p>
             <div class="border-t border-gray-800 pt-8 text-xs">
-                &copy; 2026 SE CORE BUSINESS SOLUTIONS. Designed for Excellence.
+                &copy; 2026 SE CORE BUSINESS SOLUTIONS.
             </div>
         </div>
     </footer>
@@ -200,9 +207,7 @@
 
         form.addEventListener('input', () => {
             let allFilled = true;
-            inputs.forEach(input => {
-                if (!input.value.trim()) allFilled = false;
-            });
+            inputs.forEach(input => { if (!input.value.trim()) allFilled = false; });
             submitBtn.style.display = allFilled ? 'block' : 'none';
         });
 
@@ -210,22 +215,20 @@
             e.preventDefault();
             submitBtn.disabled = true;
             submitBtn.innerText = "Submitting...";
-            statusMsg.innerText = "Processing application...";
+            statusMsg.innerText = "Processing...";
 
             fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                 .then(response => {
-                    statusMsg.innerText = "Success! Your details have been recorded.";
+                    statusMsg.innerText = "Success! Details recorded.";
                     statusMsg.className = "text-center text-sm font-bold mt-4 text-green-600";
                     form.reset();
                     submitBtn.style.display = 'none';
                     submitBtn.disabled = false;
-                    submitBtn.innerText = "Submit Application";
                 })
                 .catch(error => {
-                    statusMsg.innerText = "Submission Error. Please check your connection.";
+                    statusMsg.innerText = "Error. Please check connection.";
                     statusMsg.className = "text-center text-sm font-bold mt-4 text-red-600";
                     submitBtn.disabled = false;
-                    submitBtn.innerText = "Submit Application";
                 });
         });
     </script>
