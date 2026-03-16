@@ -16,7 +16,7 @@
         }
         .logo-slider-container {
             display: flex;
-            width: 200%; 
+            width: 200%;
             animation: scroll 25s linear infinite;
         }
         .logo-item {
@@ -50,7 +50,8 @@
             <nav class="hidden md:flex space-x-8 text-sm font-bold uppercase tracking-wide">
                 <a href="#" class="text-secore-blue">Home</a>
                 <a href="#services" class="hover:text-blue-600">Services</a>
-                <a href="#join" class="hover:text-blue-600">Join Team</a>
+                <a href="#team" class="hover:text-blue-600">Our Team</a>
+                <a href="#join" class="hover:text-blue-600">Enquiry</a>
                 <a href="tel:09866905621" class="text-orange-600"><i class="fa-solid fa-phone"></i> 098669 05621</a>
             </nav>
         </div>
@@ -104,7 +105,39 @@
         </div>
     </section>
 
-    <section id="join" class="py-24 bg-white">
+    <section id="team" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-gray-900 mb-4">Our Leadership</h2>
+                <div class="w-20 h-1.5 bg-blue-600 mx-auto"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="text-center group">
+                    <div class="w-48 h-48 mx-auto mb-6 overflow-hidden rounded-2xl border-4 border-gray-100 group-hover:border-blue-500 transition-all shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fit=crop&w=400&h=400" alt="Shiva Ellandula" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-xl font-bold">Shiva Ellandula</h4>
+                    <p class="text-blue-600 font-medium">Founder</p>
+                </div>
+                <div class="text-center group">
+                    <div class="w-48 h-48 mx-auto mb-6 overflow-hidden rounded-2xl border-4 border-gray-100 group-hover:border-blue-500 transition-all shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?fit=crop&w=400&h=400" alt="Sabeena Begum" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-xl font-bold">Sabeena Begum</h4>
+                    <p class="text-blue-600 font-medium">Project Lead</p>
+                </div>
+                <div class="text-center group">
+                    <div class="w-48 h-48 mx-auto mb-6 overflow-hidden rounded-2xl border-4 border-gray-100 group-hover:border-blue-500 transition-all shadow-lg">
+                        <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?fit=crop&w=400&h=400" alt="Ganesh Keta" class="w-full h-full object-cover">
+                    </div>
+                    <h4 class="text-xl font-bold">Ganesh Keta</h4>
+                    <p class="text-blue-600 font-medium">Consultant</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="join" class="py-24 bg-gray-50">
         <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-16">
             <div class="md:w-1/2">
                 <h2 class="text-4xl font-bold mb-6">Join Our Team as a <span class="text-blue-600">Freelancer</span></h2>
@@ -142,7 +175,7 @@
                         </div>
                     </div>
                     <button type="submit" id="submit-btn" class="w-full bg-secore-blue text-white font-black py-4 rounded-xl hover:bg-blue-800 transition uppercase tracking-widest mt-4">Submit Application</button>
-                    <p id="status-msg" class="text-center text-sm font-bold mt-4"></p>
+                    <p id="status-message" class="text-center text-sm font-bold mt-4"></p>
                 </form>
             </div>
         </div>
@@ -162,10 +195,9 @@
         const scriptURL = 'https://script.google.com/macros/s/AKfycbzWlURgg9_4xi1KqMketn9arl3bSWJaNQ5AOwGCHee5dCSVjXyLSZtUBE3qOZWJ_6J4ww/exec';
         const form = document.getElementById('registration-form');
         const submitBtn = document.getElementById('submit-btn');
-        const statusMsg = document.getElementById('status-msg');
+        const statusMsg = document.getElementById('status-message');
         const inputs = form.querySelectorAll('input[required]');
 
-        // Show submit button only when all fields have some content
         form.addEventListener('input', () => {
             let allFilled = true;
             inputs.forEach(input => {
@@ -178,20 +210,20 @@
             e.preventDefault();
             submitBtn.disabled = true;
             submitBtn.innerText = "Submitting...";
-            statusMsg.innerText = "Sending your data to the spreadsheet...";
+            statusMsg.innerText = "Processing application...";
 
             fetch(scriptURL, { method: 'POST', body: new FormData(form)})
                 .then(response => {
-                    statusMsg.innerText = "Success! Your details were recorded.";
-                    statusMsg.classList.add("text-green-600");
+                    statusMsg.innerText = "Success! Your details have been recorded.";
+                    statusMsg.className = "text-center text-sm font-bold mt-4 text-green-600";
                     form.reset();
                     submitBtn.style.display = 'none';
                     submitBtn.disabled = false;
                     submitBtn.innerText = "Submit Application";
                 })
                 .catch(error => {
-                    statusMsg.innerText = "Error! Details not filled on google sheets. Check script URL or headers.";
-                    statusMsg.classList.add("text-red-600");
+                    statusMsg.innerText = "Submission Error. Please check your connection.";
+                    statusMsg.className = "text-center text-sm font-bold mt-4 text-red-600";
                     submitBtn.disabled = false;
                     submitBtn.innerText = "Submit Application";
                 });
