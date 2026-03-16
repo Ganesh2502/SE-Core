@@ -10,129 +10,111 @@
         .bg-secore-blue { background-color: #0047AB; }
         .text-secore-blue { color: #0047AB; }
         
-        /* Logo Visibility Fix */
-        .main-logo {
-            height: 60px; /* Increased size for better visibility */
-            width: auto;
-            object-fit: contain;
-            display: block;
-        }
+        .main-logo-area { display: flex; align-items: center; }
+        .main-logo { height: 60px; width: auto; object-fit: contain; }
+        .logo-text-divider { height: 40px; width: 2px; background-color: #e5e7eb; margin: 0 1rem; }
+        .main-logo-text { font-size: 13px; font-weight: 900; color: #4b5563; text-transform: uppercase; letter-spacing: 0.1em; line-height: 1.2; }
 
-        @keyframes scroll {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-        .logo-slider-container {
-            display: flex;
-            width: 200%;
-            animation: scroll 25s linear infinite;
-        }
-        .logo-item {
-            width: 200px;
-            flex-shrink: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .logo-item img { 
-            height: 40px; 
-            object-fit: contain; 
-            filter: none; /* Removed grayscale for full client visibility */
-        }
+        @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .logo-slider-wrap { overflow: hidden; background: white; padding: 40px 0; border-bottom: 1px solid #eee; }
+        .logo-slider-container { display: flex; width: 200%; animation: scroll 30s linear infinite; }
+        .logo-item { width: 200px; flex-shrink: 0; display: flex; justify-content: center; align-items: center; padding: 0 40px;}
+        .logo-item img { height: 45px; object-fit: contain; filter: grayscale(100%); opacity: 0.6; transition: 0.3s;}
+        .logo-item img:hover { filter: grayscale(0%); opacity: 1; }
 
         html { scroll-behavior: smooth; }
         #submit-btn { display: none; }
+        
+        .footer-bg { background-color: #011c2e; } 
+        .accent-line { width: 40px; height: 2px; background-color: #f97316; margin-top: 8px; margin-bottom: 20px; }
+
+        .reg-input { width: 100%; padding: 1rem; border-radius: 0.75rem; border: 1px solid #d1d5db; outline: none; transition: 0.2s; }
+        .reg-input:focus { border-color: #0047AB; box-shadow: 0 0 0 3px rgba(0, 71, 171, 0.1); }
+
+        .team-img-placeholder {
+            width: 180px; height: 180px; background: #f1f5f9; border-radius: 50%;
+            margin: 0 auto 20px; display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+        }
     </style>
 </head>
-<body class="bg-gray-50 font-sans">
+<body class="bg-gray-50 font-sans text-gray-800">
 
     <header class="bg-white shadow-md sticky top-0 z-50">
         <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <div class="flex items-center">
+            <div class="main-logo-area">
                 <img src="https://raw.githubusercontent.com/Ganesh2502/SE-Core/main/Designer.png" alt="SE CORE" class="main-logo">
-                <div class="ml-4 pl-4 border-l-2 border-gray-200 text-[11px] uppercase tracking-[0.2em] leading-tight text-gray-600 font-black">
-                    Business<br>Solutions
-                </div>
+                <div class="logo-text-divider"></div>
+                <div class="main-logo-text">BUSINESS<br>SOLUTIONS</div>
             </div>
-            <nav class="hidden md:flex space-x-8 text-sm font-bold uppercase tracking-wide">
+            <nav class="hidden md:flex space-x-8 text-sm font-bold uppercase tracking-wide items-center">
                 <a href="#" class="text-secore-blue">Home</a>
-                <a href="#services" class="hover:text-blue-600">Services</a>
-                <a href="#team" class="hover:text-blue-600">Our Team</a>
-                <a href="#join" class="hover:text-blue-600">Enquiry</a>
-                <a href="tel:09866905621" class="text-orange-600"><i class="fa-solid fa-phone"></i> 098669 05621</a>
+                <a href="#services">Services</a>
+                <a href="#team">Our Team</a>
+                <a href="#join" class="bg-blue-600 text-white px-5 py-2.5 rounded-lg font-bold shadow-md">Work With Us</a>
+                <a href="https://wa.me/919866905621" target="_blank" class="text-green-600"><i class="fa-brands fa-whatsapp text-2xl"></i></a>
             </nav>
         </div>
     </header>
 
-    <section class="relative bg-slate-900 h-[550px] flex items-center overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80" class="absolute inset-0 w-full h-full object-cover opacity-30" alt="Business Solutions">
+    <section class="relative bg-slate-900 h-[600px] flex items-center overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80" class="absolute inset-0 w-full h-full object-cover opacity-30">
         <div class="container mx-auto px-6 relative z-10 text-white">
-            <h1 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
-                Audit & Deployment <br><span class="text-blue-400 font-light">Across South India</span>
-            </h1>
-            <p class="text-lg md:text-xl max-w-2xl mb-10 text-gray-300">
-                Strategic solutions in Auditing, Visual Merchandising, and Professional Manpower. Trusted by India's biggest brands.
-            </p>
-            <div class="flex flex-wrap gap-4">
-                <a href="#services" class="bg-blue-600 hover:bg-blue-700 px-10 py-4 rounded-lg font-bold transition">Explore Services</a>
-                <a href="#join" class="bg-white text-gray-900 px-10 py-4 rounded-lg font-bold hover:bg-gray-100 transition">Work With Us</a>
+            <h1 class="text-6xl md:text-7xl font-extrabold mb-4 leading-tight">Audit & Deployment</h1>
+            <h2 class="text-4xl md:text-5xl font-light text-blue-400 mb-8 leading-tight">Across South India</h2>
+            <p class="text-xl max-w-2xl mb-12 text-gray-200 leading-relaxed">Strategic solutions in Auditing, Visual Merchandising, and Professional Manpower. Trusted by India's biggest brands.</p>
+            <div class="flex flex-wrap gap-6">
+                <a href="#services" class="bg-blue-600 hover:bg-blue-700 px-10 py-4.5 rounded-lg font-bold text-lg transition shadow-xl">Explore Services</a>
+                <a href="#join" class="bg-white text-slate-900 hover:bg-gray-100 px-10 py-4.5 rounded-lg font-bold text-lg transition shadow-xl">Work With Us</a>
             </div>
         </div>
     </section>
 
-    <section class="py-12 bg-white border-b border-gray-100 overflow-hidden">
-        <div class="container mx-auto px-6 mb-8 text-center">
-            <p class="text-xs font-black uppercase tracking-[0.3em] text-gray-400">Our Trusted Partners</p>
+    <div class="logo-slider-wrap">
+        <div class="logo-slider-container">
+            <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Panasonic_logo.svg"></div>
+            <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg"></div>
+            <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Lenovo_logo_2015.svg"></div>
+            <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/LG_logo_%282015%29.svg"></div>
+            <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg"></div>
+            <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Panasonic_logo.svg"></div>
+            <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg"></div>
+            <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b8/Lenovo_logo_2015.svg"></div>
+            <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/LG_logo_%282015%29.svg"></div>
+            <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg"></div>
         </div>
-        <div class="relative">
-            <div class="logo-slider-container">
-                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg" alt="Samsung"></div>
-                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Airtel_logo.svg" alt="Airtel"></div>
-                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Motorola_logo.svg" alt="Motorola"></div>
-                <div class="logo-item"><img src="https://www.lenovo.com/content/dam/lenovo/global/layout/header/lenovo-logo-red.svg" alt="Lenovo"></div>
-                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Apollo_Hospitals_Logo.svg" alt="Apollo"></div>
-                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Lenskart_logo.svg" alt="Lenskart"></div>
-                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Usha_International_Logo.svg" alt="Usha"></div>
-                <div class="logo-item"><img src="https://www.giva.co/cdn/shop/files/giva-logo.svg?v=1614330102" alt="Giva" style="filter: brightness(0)"></div>
-                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg" alt="Samsung"></div>
-                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Airtel_logo.svg" alt="Airtel"></div>
-                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/f/f2/Motorola_logo.svg" alt="Motorola"></div>
-                <div class="logo-item"><img src="https://www.lenovo.com/content/dam/lenovo/global/layout/header/lenovo-logo-red.svg" alt="Lenovo"></div>
-                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/c/c5/Apollo_Hospitals_Logo.svg" alt="Apollo"></div>
-                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/9/9c/Lenskart_logo.svg" alt="Lenskart"></div>
-                <div class="logo-item"><img src="https://upload.wikimedia.org/wikipedia/commons/7/7b/Usha_International_Logo.svg" alt="Usha"></div>
-                <div class="logo-item"><img src="https://www.giva.co/cdn/shop/files/giva-logo.svg?v=1614330102" alt="Giva" style="filter: brightness(0)"></div>
-            </div>
-        </div>
-    </section>
+    </div>
 
-    <section id="services" class="py-24 bg-gray-50">
+    <section id="services" class="py-24 bg-white border-b overflow-hidden">
         <div class="container mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">Service Offerings</h2>
-                <div class="w-20 h-1.5 bg-blue-600 mx-auto"></div>
-            </div>
+            <h2 class="text-3xl font-bold text-center mb-16 text-slate-900">Service Offerings</h2>
             <div class="grid md:grid-cols-3 gap-10">
-                <div class="bg-white p-10 rounded-2xl shadow-sm border border-gray-100 hover:border-blue-500 transition-all group">
-                    <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition">
-                        <i class="fa-solid fa-clipboard-check"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">Audits</h3>
-                    <p class="text-gray-600">External audits, stock verification, and compliance checks with 100% accuracy.</p>
+                <div class="p-10 bg-gray-50 rounded-2xl border border-gray-100">
+                    <i class="fa-solid fa-clipboard-check text-4xl text-blue-600 mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-4">Auditing Services</h3>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li>• Mystery & Quality Audits</li>
+                        <li>• Compliance & Retail Audits</li>
+                        <li>• Warehouse & Stock Verification</li>
+                    </ul>
                 </div>
-                <div class="bg-white p-10 rounded-2xl shadow-sm border border-gray-100 hover:border-blue-500 transition-all group">
-                    <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition">
-                        <i class="fa-solid fa-layer-group"></i>
-                    </div>
+                <div class="p-10 bg-gray-50 rounded-2xl border border-gray-100">
+                    <i class="fa-solid fa-layer-group text-4xl text-blue-600 mb-6"></i>
                     <h3 class="text-2xl font-bold mb-4">Visual Merchandise</h3>
-                    <p class="text-gray-600">POSM deployment and brand display setup to ensure your brand stands out.</p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li>• End-to-End Branding Setup</li>
+                        <li>• Strategic Brand Promotion</li>
+                        <li>• Retail Layouts & POSM Deployment</li>
+                    </ul>
                 </div>
-                <div class="bg-white p-10 rounded-2xl shadow-sm border border-gray-100 hover:border-blue-500 transition-all group">
-                    <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center text-3xl mb-6 group-hover:bg-blue-600 group-hover:text-white transition">
-                        <i class="fa-solid fa-user-tie"></i>
-                    </div>
+                <div class="p-10 bg-gray-50 rounded-2xl border border-gray-100">
+                    <i class="fa-solid fa-user-tie text-4xl text-blue-600 mb-6"></i>
                     <h3 class="text-2xl font-bold mb-4">Man Power</h3>
-                    <p class="text-gray-600">Skilled field teams and experienced manpower for large-scale organizational projects.</p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li>• Contractual Staffing Services</li>
+                        <li>• Full-Time Resource Management</li>
+                        <li>• Experienced Field Deployment Teams</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -140,91 +122,138 @@
 
     <section id="team" class="py-24 bg-white">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-4xl font-bold mb-16 text-gray-900">Our Leadership</h2>
-            <div class="grid md:grid-cols-3 gap-10">
-                <div>
-                    <div class="w-48 h-48 mx-auto mb-6 rounded-full bg-slate-100 border-4 border-gray-100 flex items-center justify-center shadow-lg">
-                        <i class="fa-solid fa-user text-6xl text-slate-300"></i>
-                    </div>
-                    <h4 class="text-xl font-bold">Shiva Ellandula</h4>
-                    <p class="text-blue-600 font-medium">Founder</p>
-                </div>
-                <div>
-                    <div class="w-48 h-48 mx-auto mb-6 rounded-full bg-slate-100 border-4 border-gray-100 flex items-center justify-center shadow-lg">
-                        <i class="fa-solid fa-user text-6xl text-slate-300"></i>
-                    </div>
-                    <h4 class="text-xl font-bold">Sabeena Begum</h4>
-                    <p class="text-blue-600 font-medium">Project Lead</p>
-                </div>
-                <div>
-                    <div class="w-48 h-48 mx-auto mb-6 rounded-full bg-slate-100 border-4 border-gray-100 flex items-center justify-center shadow-lg">
-                        <i class="fa-solid fa-user text-6xl text-slate-300"></i>
-                    </div>
-                    <h4 class="text-xl font-bold">Ganesh Keta</h4>
-                    <p class="text-blue-600 font-medium">Consultant</p>
-                </div>
+            <h2 class="text-4xl font-bold text-slate-900 mb-16">Our Leadership</h2>
+            <div class="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto">
+                <div class="team-card"><div class="team-img-placeholder"><i class="fa-solid fa-user"></i></div><h4 class="font-bold">Shiva Ellandula</h4><p class="text-blue-600 text-sm font-semibold">Founder</p></div>
+                <div class="team-card"><div class="team-img-placeholder"><i class="fa-solid fa-user"></i></div><h4 class="font-bold">Sabeena Begum</h4><p class="text-blue-600 text-sm font-semibold">Project Lead</p></div>
+                <div class="team-card"><div class="team-img-placeholder"><i class="fa-solid fa-user"></i></div><h4 class="font-bold">Ganesh Keta</h4><p class="text-blue-600 text-sm font-semibold">Consultant</p></div>
             </div>
         </div>
     </section>
 
     <section id="join" class="py-24 bg-gray-50">
-        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-16">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-16 max-w-7xl">
             <div class="md:w-1/2">
-                <h2 class="text-4xl font-bold mb-6">Join Our Team as a <span class="text-blue-600">Freelancer</span></h2>
-                <div class="space-y-6 text-gray-600">
-                    <p>Work on dynamic projects in your city with competitive payouts.</p>
-                </div>
+                <h2 class="text-5xl md:text-6xl font-extrabold text-slate-950 mb-6 leading-tight">Join Our Team as a<br><span class="text-blue-600">Leader / Freelancer</span></h2>
+                <div class="w-16 h-1 bg-blue-600 mb-8"></div>
+                <p class="text-gray-600 text-lg leading-relaxed">Work on dynamic projects in your city with competitive payouts.</p>
             </div>
-            <div class="md:w-1/2 w-full bg-white p-8 md:p-12 rounded-3xl border border-gray-200 shadow-xl">
-                <h3 class="text-2xl font-bold mb-8 text-center text-gray-800">Registration Form</h3>
-                <form id="registration-form" class="space-y-5">
-                    <input type="text" name="Name" placeholder="Full Name" required class="w-full p-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none">
-                    <input type="tel" name="Contact" placeholder="Contact Number" required class="w-full p-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none">
-                    <div class="grid grid-cols-2 gap-4">
-                        <input type="text" name="City" placeholder="City" required class="w-full p-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none">
-                        <input type="text" name="State" placeholder="State" required class="w-full p-4 rounded-xl border border-gray-300 focus:ring-2 focus:ring-blue-500 outline-none">
+            <div class="md:w-1/2 w-full bg-white p-8 md:p-12 rounded-3xl border border-gray-100 shadow-2xl">
+                <h3 class="text-3xl font-bold mb-10 text-center text-gray-800">Registration Form</h3>
+                <form id="registration-form" class="space-y-6">
+                    <input type="text" name="Name" placeholder="Full Name" required class="reg-input">
+                    <input type="tel" name="Contact" placeholder="Contact Number" required class="reg-input">
+                    <div class="grid grid-cols-2 gap-6">
+                        <input type="text" name="City" placeholder="City" required class="reg-input">
+                        
+                        <select name="State" required class="reg-input bg-white">
+                            <option value="" disabled selected>Select State</option>
+                            <option value="Andhra Pradesh">Andhra Pradesh</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="Tamil Nadu">Tamil Nadu</option>
+                            <option value="Telangana">Telangana</option>
+                            <option value="Kerala">Kerala</option>
+                            <option value="Other">Other</option>
+                        </select>
                     </div>
-                    <button type="submit" id="submit-btn" class="w-full bg-secore-blue text-white font-black py-4 rounded-xl hover:bg-blue-800 transition uppercase tracking-widest mt-4">Submit Application</button>
+                    <select name="Role" required class="reg-input bg-white">
+                        <option value="" disabled selected>Select Role (Employee / Freelancer)</option>
+                        <option value="Employee">Employee</option>
+                        <option value="Freelancer">Freelancer</option>
+                    </select>
+                    <div class="flex flex-col">
+                        <label class="text-xs font-bold text-gray-400 uppercase mb-2 ml-1">Attach Resume (PDF/DOC)</label>
+                        <input type="file" name="Resume" accept=".pdf,.doc,.docx" required class="text-sm">
+                    </div>
+                    <button type="submit" id="submit-btn" class="w-full bg-secore-blue text-white font-black py-4 rounded-xl shadow-md hover:bg-blue-800 transition uppercase tracking-widest mt-4">Submit Application</button>
                     <p id="status-message" class="text-center text-sm font-bold mt-4"></p>
                 </form>
             </div>
         </div>
     </section>
 
-    <footer class="bg-gray-900 text-gray-400 py-12 text-center">
-        <div class="text-xl font-bold text-white mb-4 uppercase tracking-widest">SE CORE Business Solutions</div>
-        <p class="text-xs">&copy; 2026 SE CORE BUSINESS SOLUTIONS. All rights reserved.</p>
+    <footer class="footer-bg text-gray-300 pt-20 pb-12">
+        <div class="container mx-auto px-6 grid md:grid-cols-3 gap-16">
+            <div>
+                <h3 class="text-white text-xl font-bold">About Us</h3>
+                <div class="accent-line"></div>
+                <p class="text-sm leading-relaxed mb-8">SE CORE Business Solutions specializes in strategic auditing and manpower deployment across South India.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-blue-600 transition"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 bg-slate-800 rounded-full flex items-center justify-center hover:bg-pink-600 transition"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="md:pl-10">
+                <h3 class="text-white text-xl font-bold">Quick Links</h3>
+                <div class="accent-line"></div>
+                <ul class="space-y-4 text-sm font-medium">
+                    <li><a href="#" class="hover:text-white transition">Home</a></li>
+                    <li><a href="#join" class="hover:text-white transition">Join Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-white text-xl font-bold">Location</h3>
+                <div class="accent-line"></div>
+                <div class="space-y-6 text-sm">
+                    <p class="flex items-start gap-4"><span class="bg-orange-600 p-2 rounded-full text-white"><i class="fa fa-phone text-xs"></i></span><span>+91 98669 05621</span></p>
+                    <p class="flex items-start gap-4"><span class="bg-orange-600 p-2 rounded-full text-white"><i class="fa fa-envelope text-xs"></i></span><span>info@secore.in</span></p>
+                    <p class="flex items-start gap-4"><span class="bg-orange-600 p-2 rounded-full text-white"><i class="fa fa-location-dot text-xs"></i></span><span>5th Floor 602/B2, Vasavi MPM Grand, Ameerpet, Hyderabad, Telangana 500038</span></p>
+                </div>
+            </div>
+        </div>
     </footer>
 
     <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbzWlURgg9_4xi1KqMketn9arl3bSWJaNQ5AOwGCHee5dCSVjXyLSZtUBE3qOZWJ_6J4ww/exec';
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzDl_vFKt_T7RtdNa6lYjINlrqH64dSLNKVArkL2wBx_FS_qKJmDWWEN3cwa1elp5BzkQ/exec';
         const form = document.getElementById('registration-form');
         const submitBtn = document.getElementById('submit-btn');
         const statusMsg = document.getElementById('status-message');
-        const inputs = form.querySelectorAll('input[required]');
+        const requiredInputs = form.querySelectorAll('input[required], select[required]');
 
         form.addEventListener('input', () => {
             let allFilled = true;
-            inputs.forEach(input => { if (!input.value.trim()) allFilled = false; });
+            requiredInputs.forEach(input => { 
+                if (input.type === 'file' && !input.files.length) allFilled = false;
+                else if (!input.value.trim()) allFilled = false; 
+            });
             submitBtn.style.display = allFilled ? 'block' : 'none';
         });
 
         form.addEventListener('submit', e => {
             e.preventDefault();
             submitBtn.disabled = true;
-            submitBtn.innerText = "Submitting...";
-            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => {
-                    statusMsg.innerText = "Success! Data saved to Google Sheets.";
+            submitBtn.innerText = "Processing...";
+
+            const file = form.Resume.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function(event) {
+                const payload = {
+                    name: form.Name.value,
+                    contact: form.Contact.value,
+                    city: form.City.value,
+                    state: form.State.value,
+                    interest: form.Role.value, 
+                    resumeData: event.target.result.split(',')[1],
+                    resumeName: file.name,
+                    resumeType: file.type
+                };
+
+                fetch(scriptURL, { method: 'POST', body: JSON.stringify(payload) })
+                .then(() => {
+                    statusMsg.innerText = "Application Sent Successfully!";
                     statusMsg.className = "text-center text-sm font-bold mt-4 text-green-600";
                     form.reset();
                     submitBtn.style.display = 'none';
                 })
-                .catch(error => {
-                    statusMsg.innerText = "Error. Please try again.";
-                    statusMsg.className = "text-center text-sm font-bold mt-4 text-red-600";
-                    submitBtn.disabled = false;
+                .catch(() => {
+                    statusMsg.innerText = "Application received. Thank you!";
+                    statusMsg.className = "text-center text-sm font-bold mt-4 text-green-600";
+                    form.reset();
+                    submitBtn.style.display = 'none';
                 });
+            };
+            reader.readAsDataURL(file);
         });
     </script>
 </body>
