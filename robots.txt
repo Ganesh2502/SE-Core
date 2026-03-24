@@ -1,6 +1,5 @@
-# Robots.txt for https://secore.in
 User-agent: *
 Allow: /
 
-# Sitemap location
+# Direct Google to your sitemap for faster crawling
 Sitemap: https://secore.in/sitemap.xml
