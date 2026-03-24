@@ -4,33 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>SE Core Business Solutions | Audit, Merchandising & Manpower</title>
-    <meta name="description" content="SE Core offers expert Mystery Auditing, Visual Merchandising, and Professional Manpower solutions in Ameerpet, Hyderabad. Join our freelance network across South India.">
-    <meta name="keywords" content="Audit Services Hyderabad, Visual Merchandising India, Mystery Audit Telangana, SE Core Business Solutions, Ameerpet Business Services">
-    <link rel="canonical" href="https://secore.in" />
+    <title>SE Core | Audit, Merchandising & Manpower South India</title>
+    <meta name="description" content="SE Core: Leading Mystery Auditing, Visual Merchandising, and Manpower solutions in Hyderabad. Trusted by Airtel, Samsung, and Mahindra.">
+    <meta name="keywords" content="SE Core Hyderabad, SE Core Audit, Mystery Audit Hyderabad, Visual Merchandising Hyderabad, SE Core Ameerpet, Retail Auditing South India">
     
-    <meta name="robots" content="index, follow">
-    <meta name="google-site-verification" content="6-O0qhNBVaFXuyZ1DDccIquNBMeUKzTgzg6hbmFEoeY" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "SE Core",
+      "image": "https://raw.githubusercontent.com/Ganesh2502/SE-Core/main/Designer.png",
+      "url": "https://secore.in",
+      "telephone": "+919866905621",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "5th Floor, Vasavi MPM Grand, Ameerpet",
+        "addressLocality": "Hyderabad",
+        "postalCode": "500038",
+        "addressCountry": "IN"
+      }
+    }
+    </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <style>
         .bg-secore-blue { background-color: #0047AB; }
         .text-secore-blue { color: #0047AB; }
+        html { scroll-behavior: smooth; }
+
+        /* Logo Area */
         .main-logo-area { display: flex; align-items: center; }
         .main-logo { height: 60px; width: auto; object-fit: contain; }
         .logo-text-divider { height: 40px; width: 2px; background-color: #e5e7eb; margin: 0 1rem; }
-        .main-logo-text { font-size: 13px; font-weight: 900; color: #4b5563; text-transform: uppercase; letter-spacing: 0.1em; line-height: 1.2; }
+        .main-logo-text { font-size: 14px; font-weight: 900; color: #4b5563; text-transform: uppercase; letter-spacing: 0.1em; line-height: 1.2; }
+
+        /* Slider */
         @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
         .logo-slider-wrap { overflow: hidden; background: white; padding: 40px 0; border-bottom: 1px solid #eee; }
         .logo-slider-container { display: flex; width: 200%; animation: scroll 30s linear infinite; }
         .logo-item { width: 200px; flex-shrink: 0; display: flex; justify-content: center; align-items: center; padding: 0 40px;}
         .logo-item img { height: 45px; object-fit: contain; }
-        html { scroll-behavior: smooth; }
+
+        /* Floating WhatsApp with Team Text */
+        .wa-float { position: fixed; bottom: 30px; right: 30px; background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center; box-shadow: 2px 5px 15px rgba(0,0,0,0.3); z-index: 100; padding: 12px 24px; display: flex; align-items: center; gap: 10px; transition: 0.3s; text-decoration: none; }
+        .wa-float:hover { transform: scale(1.05); background-color: #128c7e; }
+
+        /* Form Inputs */
+        .reg-input { width: 100%; padding: 1rem; border-radius: 0.75rem; border: 1px solid #d1d5db; outline: none; transition: 0.2s; }
+        .reg-input:focus { border-color: #0047AB; box-shadow: 0 0 0 3px rgba(0, 71, 171, 0.1); }
         #submit-btn { display: none; }
+
         .footer-bg { background-color: #011c2e; } 
-        .accent-line { width: 40px; height: 2px; background-color: #f97316; margin-top: 8px; margin-bottom: 20px; }
-        .reg-input { width: 100%; padding: 1rem; border-radius: 0.75rem; border: 1px solid #d1d5db; outline: none; }
+        .accent-line { width: 40px; height: 3px; background-color: #f97316; margin-top: 8px; margin-bottom: 20px; }
     </style>
 </head>
 <body class="bg-gray-50 font-sans text-gray-800">
@@ -40,7 +67,7 @@
             <div class="main-logo-area">
                 <img src="https://raw.githubusercontent.com/Ganesh2502/SE-Core/main/Designer.png" alt="SE CORE" class="main-logo">
                 <div class="logo-text-divider"></div>
-                <div class="main-logo-text">BUSINESS<br>SOLUTIONS</div>
+                <div class="main-logo-text">SE CORE<br>SOLUTIONS</div>
             </div>
             <nav class="hidden md:flex space-x-8 text-sm font-bold uppercase tracking-wide items-center">
                 <a href="#" class="text-secore-blue">Home</a>
@@ -51,14 +78,18 @@
         </div>
     </header>
 
-    <section class="relative bg-slate-900 h-[600px] flex items-center overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80" class="absolute inset-0 w-full h-full object-cover opacity-30" alt="background">
+    <a href="https://chat.whatsapp.com/EMV88JBrXV50OKJ91sHhhg" target="_blank" class="wa-float">
+        <i class="fa-brands fa-whatsapp text-2xl"></i>
+        <span class="font-bold">Join Our Team</span>
+    </a>
+
+    <section class="relative bg-slate-900 h-[500px] flex items-center overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80" class="absolute inset-0 w-full h-full object-cover opacity-30">
         <div class="container mx-auto px-6 relative z-10 text-white">
-            <h1 class="text-6xl md:text-7xl font-extrabold mb-4 leading-tight">Audit & Deployment</h1>
-            <h2 class="text-4xl md:text-5xl font-light text-blue-400 mb-8 leading-tight">Across South India</h2>
+            <h1 class="text-6xl md:text-7xl font-extrabold mb-4 leading-tight text-white">SE Core</h1>
+            <h2 class="text-3xl md:text-4xl font-light text-blue-400 mb-8">Audit & Deployment Across South India</h2>
             <div class="flex flex-wrap gap-6">
-                <a href="#services" class="bg-blue-600 hover:bg-blue-700 px-10 py-4.5 rounded-lg font-bold text-lg transition">Explore Services</a>
-                <a href="#join" class="bg-white text-slate-900 hover:bg-gray-100 px-10 py-4.5 rounded-lg font-bold text-lg transition">Work With Us</a>
+                <a href="#services" class="bg-blue-600 hover:bg-blue-700 px-10 py-4.5 rounded-lg font-bold text-lg transition shadow-xl">Our Services</a>
             </div>
         </div>
     </section>
@@ -77,15 +108,77 @@
         </div>
     </div>
 
-    <section id="join" class="py-24 bg-gray-50">
+    <section id="about" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80" alt="About SE Core" class="rounded-3xl shadow-2xl">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-4xl font-bold text-slate-900 mb-6">7+ Years of Excellence</h2>
+                    <div class="accent-line"></div>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        With over **7 years of specialized expertise**, SE Core delivers precision in Auditing and Visual Merchandising across the South Indian retail landscape.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="p-6 bg-blue-50 border-l-4 border-blue-600 rounded-xl">
+                            <h4 class="font-bold text-3xl text-blue-600">7+</h4>
+                            <p class="text-xs font-bold text-gray-500 uppercase">Years Experience</p>
+                        </div>
+                        <div class="p-6 bg-blue-50 border-l-4 border-blue-600 rounded-xl">
+                            <h4 class="font-bold text-3xl text-blue-600">500+</h4>
+                            <p class="text-xs font-bold text-gray-500 uppercase">Projects</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 bg-gray-50 border-y">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-16 text-slate-900">Service Offerings</h2>
+            <div class="grid md:grid-cols-3 gap-10">
+                <div class="p-10 bg-white rounded-2xl shadow-sm border border-gray-100">
+                    <i class="fa-solid fa-clipboard-check text-4xl text-blue-600 mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-4">Auditing Services</h3>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li>• Mystery & Quality Audits</li>
+                        <li>• Compliance & Retail Audits</li>
+                        <li>• Warehouse & Stock Verification</li>
+                    </ul>
+                </div>
+                <div class="p-10 bg-white rounded-2xl shadow-sm border border-gray-100">
+                    <i class="fa-solid fa-layer-group text-4xl text-blue-600 mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-4">Visual Merchandise</h3>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li>• End-to-End Branding Setup</li>
+                        <li>• Strategic Brand Promotion</li>
+                        <li>• Retail Layouts & POSM Deployment</li>
+                    </ul>
+                </div>
+                <div class="p-10 bg-white rounded-2xl shadow-sm border border-gray-100">
+                    <i class="fa-solid fa-user-tie text-4xl text-blue-600 mb-6"></i>
+                    <h3 class="text-2xl font-bold mb-4">Man Power</h3>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li>• Contractual Staffing Services</li>
+                        <li>• Full-Time Resource Management</li>
+                        <li>• Experienced Field Deployment Teams</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="join" class="py-24 bg-white">
         <div class="container mx-auto px-6 flex flex-col md:flex-row items-center gap-16 max-w-7xl">
             <div class="md:w-1/2">
                 <h2 class="text-5xl md:text-6xl font-extrabold text-slate-950 mb-6 leading-tight">Join Our Team as a<br><span class="text-blue-600">Leader / Freelancer</span></h2>
                 <div class="w-16 h-1 bg-blue-600 mb-8"></div>
-                <p class="text-gray-600 text-lg">Work on dynamic projects in your city with competitive payouts.</p>
+                <p class="text-gray-600 text-lg leading-relaxed">Work on dynamic projects in your city with competitive payouts. Join the SE Core network today.</p>
             </div>
-            <div class="md:w-1/2 w-full bg-white p-8 md:p-12 rounded-3xl shadow-2xl">
-                <h3 class="text-3xl font-bold mb-10 text-center">Registration Form</h3>
+            <div class="md:w-1/2 w-full bg-white p-8 md:p-12 rounded-3xl shadow-2xl border border-gray-100">
+                <h3 class="text-3xl font-bold mb-10 text-center text-gray-800">Registration Form</h3>
                 <form id="registration-form" class="space-y-6">
                     <input type="text" name="Name" placeholder="Full Name" required class="reg-input">
                     <input type="tel" name="Contact" placeholder="Contact Number" required class="reg-input">
@@ -94,20 +187,22 @@
                         <select name="State" required class="reg-input bg-white">
                             <option value="" disabled selected>Select State</option>
                             <option value="Andhra Pradesh">Andhra Pradesh</option>
-                            <option value="Telangana">Telangana</option>
                             <option value="Karnataka">Karnataka</option>
+                            <option value="Tamil Nadu">Tamil Nadu</option>
+                            <option value="Telangana">Telangana</option>
+                            <option value="Kerala">Kerala</option>
                         </select>
                     </div>
                     <select name="Role" required class="reg-input bg-white">
-                        <option value="" disabled selected>Select Role</option>
+                        <option value="" disabled selected>Select Role (Employee / Freelancer)</option>
                         <option value="Employee">Employee</option>
                         <option value="Freelancer">Freelancer</option>
                     </select>
                     <div class="flex flex-col">
-                        <label class="text-xs font-bold text-gray-400 uppercase mb-2">Attach Resume (PDF/DOC)</label>
-                        <input type="file" name="Resume" accept=".pdf,.doc,.docx" required>
+                        <label class="text-xs font-bold text-gray-400 uppercase mb-2 ml-1">Attach Resume (PDF/DOC)</label>
+                        <input type="file" name="Resume" accept=".pdf,.doc,.docx" required class="text-sm">
                     </div>
-                    <button type="submit" id="submit-btn" class="w-full bg-secore-blue text-white font-black py-4 rounded-xl uppercase tracking-widest">Submit Application</button>
+                    <button type="submit" id="submit-btn" class="w-full bg-secore-blue text-white font-black py-4 rounded-xl shadow-md hover:bg-blue-800 transition uppercase tracking-widest mt-4">Submit Application</button>
                     <p id="status-message" class="text-center text-sm font-bold mt-4"></p>
                 </form>
             </div>
@@ -115,37 +210,34 @@
     </section>
 
     <footer class="footer-bg text-gray-300 pt-20 pb-12">
-        <div class="container mx-auto px-6 grid md:grid-cols-3 gap-16">
+        <div class="container mx-auto px-6 grid md:grid-cols-3 gap-16 border-b border-gray-800 pb-12">
             <div>
-                <h3 class="text-white text-xl font-bold">About Us</h3>
+                <h3 class="text-white text-2xl font-bold mb-4">SE CORE</h3>
                 <div class="accent-line"></div>
-                <p class="text-sm">SE CORE Business Solutions specializes in strategic auditing and manpower deployment across South India.</p>
+                <p class="text-sm leading-relaxed">The premier agency for auditing and manpower deployment in South India. Headquartered in Ameerpet, Hyderabad.</p>
             </div>
             <div>
-                <h3 class="text-white text-xl font-bold">Quick Links</h3>
+                <h3 class="text-white text-xl font-bold mb-4">Quick Links</h3>
                 <div class="accent-line"></div>
-                <ul class="space-y-4 text-sm">
-                    <li><a href="#" class="hover:text-white">Home</a></li>
-                    <li><a href="#join" class="hover:text-white">Join Us</a></li>
+                <ul class="space-y-4 text-sm font-medium">
+                    <li><a href="#about" class="hover:text-white transition">About</a></li>
+                    <li><a href="#services" class="hover:text-white transition">Services</a></li>
+                    <li><a href="#join" class="hover:text-white transition">Careers</a></li>
                 </ul>
             </div>
             <div>
-                <h3 class="text-white text-xl font-bold">Contact Us</h3>
+                <h3 class="text-white text-xl font-bold mb-4">Contact</h3>
                 <div class="accent-line"></div>
-                <p class="text-sm">5th Floor 602/B2, Vasavi MPM Grand, Ameerpet, Hyderabad - 500038</p>
-                <p class="text-sm mt-2">+91 98669 05621</p>
+                <div class="space-y-6 text-sm">
+                    <p class="flex items-start gap-4"><span class="bg-orange-600 p-2 rounded-full text-white"><i class="fa fa-phone text-xs"></i></span><span>+91 98669 05621</span></p>
+                    <p class="flex items-start gap-4"><span class="bg-orange-600 p-2 rounded-full text-white"><i class="fa fa-location-dot text-xs"></i></span><span>5th Floor, Vasavi MPM Grand, Ameerpet, Hyderabad 500038</span></p>
+                </div>
             </div>
         </div>
+        <div class="text-center mt-10 opacity-30 text-[10px] uppercase tracking-[0.5em]">
+            &copy; 2026 SE CORE. ALL RIGHTS RESERVED.
+        </div>
     </footer>
-
-    <div style="position: fixed; bottom: 20px; right: 20px; z-index: 9999;">
-        <a href="https://chat.whatsapp.com/EMV88JBrXV50OKJ91sHhhg" 
-           target="_blank" 
-           style="display: flex; align-items: center; background-color: #25d366; color: white; padding: 12px 20px; border-radius: 50px; text-decoration: none; box-shadow: 0 6px 20px rgba(0,0,0,0.3); font-weight: 600;">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 26px; height: 26px; margin-right: 10px;">
-            <span>Join our group</span>
-        </a>
-    </div>
 
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbzDl_vFKt_T7RtdNa6lYjINlrqH64dSLNKVArkL2wBx_FS_qKJmDWWEN3cwa1elp5BzkQ/exec';
@@ -169,6 +261,7 @@
             submitBtn.innerText = "Processing...";
             const file = form.Resume.files[0];
             const reader = new FileReader();
+
             reader.onload = function(event) {
                 const payload = {
                     name: form.Name.value,
@@ -177,20 +270,21 @@
                     state: form.State.value,
                     interest: form.Role.value, 
                     resumeData: event.target.result.split(',')[1],
-                    resumeName: file.name,
-                    resumeType: file.type
+                    resumeName: file.name
                 };
+
                 fetch(scriptURL, { method: 'POST', body: JSON.stringify(payload) })
                 .then(() => {
                     statusMsg.innerText = "Application Sent Successfully!";
-                    statusMsg.style.color = "green";
+                    statusMsg.className = "text-center text-sm font-bold mt-4 text-green-400";
                     form.reset();
                     submitBtn.style.display = 'none';
                 })
                 .catch(() => {
                     statusMsg.innerText = "Error. Please try again.";
-                    statusMsg.style.color = "red";
+                    statusMsg.className = "text-center text-sm font-bold mt-4 text-red-400";
                     submitBtn.disabled = false;
+                    submitBtn.innerText = "Submit Application";
                 });
             };
             reader.readAsDataURL(file);
