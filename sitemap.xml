@@ -3,24 +3,28 @@
   <url>
     <loc>https://secore.in/</loc>
     <lastmod>2026-03-27</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://secore.in/audit-services-hyderabad</loc>
     <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://secore.in/visual-merchandising-services-hyderabad</loc>
     <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://secore.in/manpower-solutions-hyderabad</loc>
     <lastmod>2026-03-27</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 </urlset>
