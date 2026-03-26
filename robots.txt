@@ -1,5 +1,8 @@
 User-agent: *
 Allow: /
 
-# Sitemap Location
+# Specific link to your sitemap to help bots find it faster
 Sitemap: https://secore.in/sitemap.xml
+
+# Block any private or draft folders if you have them (Optional)
+# Disallow: /drafts/
