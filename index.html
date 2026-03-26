@@ -16,69 +16,135 @@
     <meta name="ICBM" content="17.4375, 78.4482" />
 
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "SE Core Business Solutions",
-      "image": "https://raw.githubusercontent.com/Ganesh2502/SE-Core/main/Designer.png",
-      "@id": "https://secore.in",
-      "url": "https://secore.in",
-      "telephone": "+919866905621",
-      "priceRange": "₹₹",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "5th Floor, 602/B2, Vasavi MPM Grand, Ameerpet",
-        "addressLocality": "Hyderabad",
-        "postalCode": "500038",
-        "addressCountry": "IN"
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Secore",
+  "logo": "https://raw.githubusercontent.com/Ganesh2502/SE-Core/main/Designer.png",
+  "image": "https://raw.githubusercontent.com/Ganesh2502/SE-Core/main/Designer.png",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Ameerpet",
+    "addressLocality": "Hyderabad",
+    "addressRegion": "TS",
+    "postalCode": "500016",
+    "addressCountry": "IN"
+  },
+  "url": "https://secore.in",
+  "telephone": "+91-9866905621", 
+  "openingHours": "Mo-Fr 09:00-18:00",
+  "description": "Expert Audit services, Visual Merchandising, and Manpower solutions in Hyderabad and Ameerpet.",
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Secore Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Corporate & Statutory Audit" }
       },
-      "geo": {
-        "@type": "GeoCoordinates",
-        "latitude": 17.4375,
-        "longitude": 78.4482
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Visual Merchandising & Retail Support" }
       },
-      "openingHoursSpecification": {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-        "opens": "09:00",
-        "closes": "18:00"
+      {
+        "@type": "Offer",
+        "itemOffered": { "@type": "Service", "name": "Manpower Staffing & Mystery Auditing" }
       }
-    }
-    </script>
+    ]
+  }
+}
+</script>
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <style>
-        .bg-secore-blue { background-color: #0047AB; }
-        .text-secore-blue { color: #0047AB; }
-        html { scroll-behavior: smooth; }
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
-        /* Logo Area */
-        .main-logo-area { display: flex; align-items: center; }
-        .main-logo { height: 60px; width: auto; object-fit: contain; }
-        .logo-text-divider { height: 40px; width: 2px; background-color: #e5e7eb; margin: 0 1rem; }
-        .main-logo-text { font-size: 14px; font-weight: 900; color: #4b5563; text-transform: uppercase; letter-spacing: 0.1em; line-height: 1.2; }
+<style>
+  .bg-secore-blue { background-color: #0047AB; }
+  .text-secore-blue { color: #0047AB; }
+  html { scroll-behavior: smooth; }
 
-        /* Slider */
-        @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-        .logo-slider-wrap { overflow: hidden; background: white; padding: 40px 0; border-bottom: 1px solid #eee; }
-        .logo-slider-container { display: flex; width: 200%; animation: scroll 30s linear infinite; }
-        .logo-item { width: 200px; flex-shrink: 0; display: flex; justify-content: center; align-items: center; padding: 0 40px;}
-        .logo-item img { height: 45px; object-fit: contain; }
+  /* Logo Area */
+  .main-logo-area { display: flex; align-items: center; }
+  .main-logo { height: 60px; width: auto; object-fit: contain; }
+  .logo-text-divider { height: 40px; width: 2px; background-color: #e5e7eb; margin: 0 1rem; }
+  .main-logo-text {
+    font-size: 14px;
+    font-weight: 900;
+    color: #4b5563;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    line-height: 1.2;
+  }
 
-        /* Floating WhatsApp with Team Text */
-        .wa-float { position: fixed; bottom: 30px; right: 30px; background-color: #25d366; color: #FFF; border-radius: 50px; text-align: center; box-shadow: 2px 5px 15px rgba(0,0,0,0.3); z-index: 100; padding: 12px 24px; display: flex; align-items: center; gap: 10px; transition: 0.3s; text-decoration: none; }
-        .wa-float:hover { transform: scale(1.05); background-color: #128c7e; }
+  /* Slider */
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .logo-slider-wrap {
+    overflow: hidden;
+    background: white;
+    padding: 40px 0;
+    border-bottom: 1px solid #eee;
+  }
+  .logo-slider-container {
+    display: flex;
+    width: 200%;
+    animation: scroll 30s linear infinite;
+  }
+  .logo-item {
+    width: 200px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 40px;
+  }
+  .logo-item img { height: 45px; object-fit: contain; }
 
-        /* Form Inputs */
-        .reg-input { width: 100%; padding: 1rem; border-radius: 0.75rem; border: 1px solid #d1d5db; outline: none; transition: 0.2s; }
-        .reg-input:focus { border-color: #0047AB; box-shadow: 0 0 0 3px rgba(0, 71, 171, 0.1); }
-        #submit-btn { display: none; }
+  /* Floating WhatsApp */
+  .wa-float {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    box-shadow: 2px 5px 15px rgba(0,0,0,0.3);
+    z-index: 100;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+    text-decoration: none;
+  }
+  .wa-float:hover {
+    transform: scale(1.05);
+    background-color: #128c7e;
+  }
 
-        .footer-bg { background-color: #011c2e; } 
-        .accent-line { width: 40px; height: 3px; background-color: #f97316; margin-top: 8px; margin-bottom: 20px; }
-    </style>
+  /* Form Inputs */
+  .reg-input {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    border: 1px solid #d1d5db;
+  }
+  .reg-input:focus {
+    border-color: #0047AB;
+    box-shadow: 0 0 0 3px rgba(0,71,171,0.1);
+  }
+
+  .footer-bg { background-color: #011c2e; }
+  .accent-line {
+    width: 40px;
+    height: 3px;
+    background-color: #f97316;
+    margin-top: 8px;
+    margin-bottom: 20px;
+  }
+</style>
 </head>
 <body class="bg-gray-50 font-sans text-gray-800">
 
