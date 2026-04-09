@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>SE Core | No. 1 Audit Firm in Hyderabad & South India's Best Agency</title>
-    <meta name="description" content="SE Core Business Solutions: The best audit agency in South India and Hyderabad's No. 1 firm for Mystery Auditing, Visual Merchandising, and Manpower.">
+    <meta name="description" content="SE Core Business Solutions: The leading audit agency in Hyderabad and South India. Experts in Mystery Auditing, Visual Merchandising, and Manpower solutions.">
     <link rel="canonical" href="https://secore.in/" />
     <meta name="robots" content="index, follow" />
     
@@ -13,330 +13,298 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
-      :root { --primary: #0047AB; }
+      :root { --primary: #0047AB; --accent: #3b82f6; }
       .bg-secore-blue { background-color: var(--primary); }
       .text-secore-blue { color: var(--primary); }
       html { scroll-behavior: smooth; }
 
-      /* Apple/Safari Logo Fix */
-      .main-logo-area { 
-        display: flex; 
-        align-items: center; 
-        min-width: 250px; 
-        flex-shrink: 0; 
-      }
-      .main-logo { height: 60px; width: auto; display: block; object-fit: contain; }
-      .logo-text-divider { height: 40px; width: 2px; background-color: #e5e7eb; margin: 0 1rem; }
-      .main-logo-text { font-size: 14px; font-weight: 900; color: #4b5563; text-transform: uppercase; letter-spacing: 0.1em; line-height: 1.2; }
-
-      /* Hero Content Visibility & Animations */
-      @keyframes fadeInUp {
-        from { opacity: 0; transform: translateY(15px); }
-        to { opacity: 1; transform: translateY(0); }
-      }
-
-      @keyframes bgFlow {
+      /* Hero Animation */
+      @keyframes meshGradient {
         0% { background-position: 0% 50%; }
         50% { background-position: 100% 50%; }
         100% { background-position: 0% 50%; }
       }
-
-      .animate-fade-up { 
-        animation: fadeInUp 0.6s ease-out forwards; 
-        opacity: 0; 
+      @keyframes textShimmer {
+        0% { background-position: -200% center; }
+        100% { background-position: 200% center; }
       }
-      .delay-1 { animation-delay: 0.1s; }
-      .delay-2 { animation-delay: 0.2s; }
-      .delay-3 { animation-delay: 0.3s; }
-      
-      .animated-bg {
-        background: linear-gradient(-45deg, #0b1635, #1e293b, #0f172a, #1a365d);
+      .hero-mesh {
+        background: linear-gradient(-45deg, #020617, #0f172a, #1e3a8a, #020617);
         background-size: 400% 400%;
-        animation: bgFlow 12s ease infinite;
+        animation: meshGradient 15s ease infinite;
       }
-
-      #hero-canvas { 
-        position: absolute; 
-        top: 0; left: 0; 
-        width: 100%; height: 100%; 
-        z-index: 2; /* Below text, above bg */
-        opacity: 0.2; 
-      }
-
-      .hero-content {
-        position: relative;
-        z-index: 10; /* Highest priority */
+      .shimmer-text {
+        background: linear-gradient(90deg, #fff 0%, #3b82f6 50%, #fff 100%);
+        background-size: 200% auto;
+        -webkit-background-clip: text;
+        text-fill-color: transparent;
+        -webkit-text-fill-color: transparent;
+        animation: textShimmer 3s linear infinite;
       }
 
       /* Logo Slider */
       @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-      .logo-slider-wrap { overflow: hidden; background: white; padding: 40px 0; border-bottom: 1px solid #eee; }
       .logo-slider-container { display: flex; width: 200%; animation: scroll 30s linear infinite; }
-      .logo-item { width: 200px; flex-shrink: 0; display: flex; justify-content: center; align-items: center; padding: 0 40px; }
-      .logo-item img { height: 45px; object-fit: contain; }
+      
+      /* Service Icon Style */
+      .service-icon-box {
+        width: 64px; height: 64px; background-color: #3b82f6; border-radius: 12px;
+        display: flex; align-items: center; justify-content: center;
+        margin-bottom: 2rem; box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.4);
+      }
 
+      /* WhatsApp Float */
       .wa-float {
         position: fixed; bottom: 30px; right: 30px; background-color: #25d366; color: #FFF; 
         border-radius: 50px; box-shadow: 2px 5px 15px rgba(0,0,0,0.3); z-index: 100; 
         padding: 12px 24px; display: flex; align-items: center; gap: 10px; 
         transition: 0.3s; text-decoration: none;
       }
-
-      .reg-input { width: 100%; padding: 1rem; border-radius: 0.75rem; border: 1px solid #d1d5db; outline-color: #0047AB; }
     </style>
 </head>
-<body class="bg-gray-50 font-sans text-gray-800">
+<body class="bg-slate-50 font-sans text-gray-800">
 
-    <header class="bg-white/95 backdrop-blur-md shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <div class="main-logo-area">
-                <img src="https://raw.githubusercontent.com/Ganesh2502/SE-Core/main/Designer.png" alt="SE CORE" class="main-logo">
-                <div class="logo-text-divider"></div>
-                <div class="main-logo-text">SE CORE<br>SOLUTIONS</div>
+    <header class="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <img src="https://raw.githubusercontent.com/Ganesh2502/SE-Core/main/Designer.png" alt="SE Core Business Solutions Logo" class="h-12 w-auto object-contain">
+                <div class="h-8 w-[1px] bg-gray-200"></div>
+                <div class="text-xs font-black text-gray-700 uppercase leading-none tracking-tighter">SE CORE<br>SOLUTIONS</div>
             </div>
-            <nav class="hidden md:flex space-x-8 text-sm font-bold uppercase tracking-wide">
-                <a href="#" class="text-secore-blue">Home</a>
-                <a href="#about">About</a>
-                <a href="#services">Services</a>
-                <a href="#join" class="bg-blue-600 text-white px-5 py-2.5 rounded-lg">Work With Us</a>
+            <nav class="hidden md:flex space-x-8 text-xs font-bold uppercase tracking-widest">
+                <a href="#" class="hover:text-blue-600 transition">Home</a>
+                <a href="#about" class="hover:text-blue-600 transition">About</a>
+                <a href="#services" class="hover:text-blue-600 transition">Services</a>
+                <a href="#connect" class="text-blue-600 border border-blue-600 px-4 py-2 rounded-full hover:bg-blue-600 hover:text-white transition">Get Started</a>
             </nav>
         </div>
     </header>
 
-    <a href="https://chat.whatsapp.com/EMV88JBrXV50OKJ91sHhhg" target="_blank" class="wa-float">
-        <i class="fa-brands fa-whatsapp text-2xl"></i>
-        <span class="font-bold">Join Our Team</span>
-    </a>
-
-    <section class="relative h-[280px] flex items-center justify-center overflow-hidden animated-bg">
-        <div class="absolute inset-0 bg-[#0b1635]/40 z-1"></div>
-        
-        <canvas id="hero-canvas"></canvas>
-        
-        <div class="hero-content text-center text-white px-6">
-            <h1 class="text-5xl md:text-6xl font-black tracking-tight animate-fade-up">
-                SE <span class="text-blue-500">CORE</span>
+    <section class="relative min-h-[500px] flex items-center overflow-hidden hero-mesh">
+        <canvas id="particle-canvas" class="absolute inset-0 z-0"></canvas>
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <span class="inline-block px-4 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs font-bold uppercase tracking-widest mb-6">
+                South India's Premier Agency
+            </span>
+            <h1 class="text-5xl md:text-8xl font-black text-white leading-tight mb-6">
+                Redefining <br>
+                <span class="shimmer-text">Retail Auditing</span>
             </h1>
-            <p class="text-sm md:text-lg mt-2 font-bold uppercase tracking-[0.2em] text-blue-200 animate-fade-up delay-1">
-                The Future of Business Auditing
+            <p class="text-gray-400 text-lg mb-10 max-w-2xl mx-auto leading-relaxed">
+                Precision data, strategic merchandising, and elite manpower deployment. We empower brands across Hyderabad and South India with 7+ years of operational excellence.
             </p>
-            <p class="text-[10px] md:text-xs text-gray-300 mt-4 max-w-2xl mx-auto leading-relaxed uppercase tracking-widest animate-fade-up delay-2">
-                Leading South India's retail excellence with precision data, strategic merchandising, and elite manpower deployment
-            </p>
-            <div class="flex gap-4 justify-center mt-6 animate-fade-up delay-3">
-                <a href="#services" class="px-6 py-2 bg-blue-600 text-xs rounded-lg font-bold hover:bg-blue-700 transition shadow-lg">Our Services</a>
-                <a href="#join" class="px-6 py-2 border border-blue-400 text-xs rounded-lg font-bold hover:bg-white/10 transition">Contact Us</a>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#services" class="px-8 py-4 bg-blue-600 text-white rounded-xl font-bold transition-all hover:scale-105 hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] flex items-center gap-2">
+                    Our Services <i class="fa-solid fa-arrow-down text-xs"></i>
+                </a>
+                <a href="#connect" class="px-8 py-4 bg-white/5 border border-white/10 text-white rounded-xl font-bold hover:bg-white/10 transition">
+                    Contact Experts
+                </a>
             </div>
         </div>
     </section>
 
-    <div class="logo-slider-wrap">
-        <div class="logo-slider-container">
-            <div class="logo-item"><img src="https://raw.githubusercontent.com/Ganesh2502/SE-Core/main/Airtel%20Logo.jpeg" alt="Airtel"></div>
-            <div class="logo-item"><img src="https://raw.githubusercontent.com/Ganesh2502/SE-Core/main/Apollo.jpeg" alt="Apollo"></div>
-            <div class="logo-item"><img src="https://raw.githubusercontent.com/Ganesh2502/SE-Core/main/GIVA.jpeg" alt="Giva"></div>
-            <div class="logo-item"><img src="https://raw.githubusercontent.com/Ganesh2502/SE-Core/main/Lenovo%20India.jpeg" alt="Lenovo"></div>
-            <div class="logo-item"><img src="https://raw.githubusercontent.com/Ganesh2502/SE-Core/main/Lenskart%20Logo.jpeg" alt="Lenskart"></div>
-            <div class="logo-item"><img src="https://raw.githubusercontent.com/Ganesh2502/SE-Core/main/Samsung.jpeg" alt="Samsung"></div>
-            <div class="logo-item"><img src="https://raw.githubusercontent.com/Ganesh2502/SE-Core/main/Usha.jpeg" alt="Usha"></div>
-            <div class="logo-item"><img src="https://raw.githubusercontent.com/Ganesh2502/SE-Core/main/Mahindra.jpeg" alt="Mahindra"></div>
+    <div class="py-12 bg-white border-b border-gray-100">
+        <div class="container mx-auto px-6 overflow-hidden">
+            <p class="text-center text-[10px] font-black text-gray-400 uppercase tracking-[0.3em] mb-8">Trusted by Industry Leaders</p>
+            <div class="logo-slider-container">
+                <div class="flex-shrink-0 px-10"><img src="https://raw.githubusercontent.com/Ganesh2502/SE-Core/main/Airtel%20Logo.jpeg" alt="Airtel Retail Audit Partner" class="h-10 object-contain"></div>
+                <div class="flex-shrink-0 px-10"><img src="https://raw.githubusercontent.com/Ganesh2502/SE-Core/main/Apollo.jpeg" alt="Apollo Pharmacy Quality Audit" class="h-10 object-contain"></div>
+                <div class="flex-shrink-0 px-10"><img src="https://raw.githubusercontent.com/Ganesh2502/SE-Core/main/GIVA.jpeg" alt="Giva Jewelry Visual Merchandising" class="h-10 object-contain"></div>
+                <div class="flex-shrink-0 px-10"><img src="https://raw.githubusercontent.com/Ganesh2502/SE-Core/main/Lenovo%20India.jpeg" alt="Lenovo India Business Solutions" class="h-10 object-contain"></div>
+                <div class="flex-shrink-0 px-10"><img src="https://raw.githubusercontent.com/Ganesh2502/SE-Core/main/Lenskart%20Logo.jpeg" alt="Lenskart Store Auditing Service" class="h-10 object-contain"></div>
+                <div class="flex-shrink-0 px-10"><img src="https://raw.githubusercontent.com/Ganesh2502/SE-Core/main/Samsung.jpeg" alt="Samsung Visual Merchandising Hyderabad" class="h-10 object-contain"></div>
+                <div class="flex-shrink-0 px-10"><img src="https://raw.githubusercontent.com/Ganesh2502/SE-Core/main/Airtel%20Logo.jpeg" alt="Airtel Audit Solutions" class="h-10 object-contain"></div>
+            </div>
         </div>
     </div>
 
-    <section id="about" class="py-16 bg-white">
+    <section id="services" class="py-24 bg-white">
         <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row items-center gap-12">
-                <div class="md:w-1/2">
-                    <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&q=80" class="rounded-2xl shadow-xl">
-                </div>
-                <div class="md:w-1/2">
-                    <h2 class="text-3xl font-extrabold text-gray-900 leading-tight">Empowering Retail Excellence Across South India</h2>
-                    <div class="w-12 h-1 bg-orange-500 my-4"></div>
-                    <p class="text-gray-600 mb-6">Operating across Andhra Pradesh, Telangana, Karnataka, Kerala, and Tamil Nadu.</p>
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="p-5 bg-blue-50 border-l-4 border-blue-600 rounded-lg">
-                            <h4 class="font-bold text-2xl text-blue-600">7+</h4>
-                            <p class="text-[10px] font-bold text-gray-400 uppercase">Years Experience</p>
-                        </div>
-                        <div class="p-5 bg-blue-50 border-l-4 border-blue-600 rounded-lg">
-                            <h4 class="font-bold text-2xl text-blue-600">500+</h4>
-                            <p class="text-[10px] font-bold text-gray-400 uppercase">Projects</p>
-                        </div>
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-black text-slate-900 uppercase tracking-widest">Our Service Expertise</h2>
+                <div class="w-20 h-1.5 bg-blue-600 mx-auto mt-4 rounded-full"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="group p-10 bg-slate-50 rounded-[40px] border border-gray-100 transition-all hover:shadow-xl hover:bg-white">
+                    <div class="service-icon-box group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-clipboard-check text-3xl text-white"></i>
                     </div>
+                    <h3 class="text-2xl font-bold mb-4 text-slate-800">Auditing Services</h3>
+                    <ul class="text-gray-500 space-y-3 font-medium text-sm">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full"></span> Mystery & Quality Audits</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full"></span> Compliance & Retail Audits</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full"></span> Warehouse & Stock Verification</li>
+                    </ul>
+                </div>
+
+                <div class="group p-10 bg-slate-50 rounded-[40px] border border-gray-100 transition-all hover:shadow-xl hover:bg-white">
+                    <div class="service-icon-box group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-layer-group text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-slate-800">Visual Merchandise</h3>
+                    <ul class="text-gray-500 space-y-3 font-medium text-sm">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full"></span> End-to-End Branding Setup</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full"></span> Strategic Brand Promotion</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full"></span> Retail Layouts & POSM Deployment</li>
+                    </ul>
+                </div>
+
+                <div class="group p-10 bg-slate-50 rounded-[40px] border border-gray-100 transition-all hover:shadow-xl hover:bg-white">
+                    <div class="service-icon-box group-hover:scale-110 transition-transform">
+                        <i class="fa-solid fa-user-tie text-3xl text-white"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-slate-800">Man Power</h3>
+                    <ul class="text-gray-500 space-y-3 font-medium text-sm">
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full"></span> Contractual Staffing Services</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full"></span> Full-Time Resource Management</li>
+                        <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full"></span> Field Deployment Teams</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="services" class="py-24 bg-gray-50 border-y border-gray-100">
-    <div class="container mx-auto px-6">
-        <div class="text-center mb-16">
-            <h2 class="text-3xl md:text-4xl font-black text-slate-900 uppercase tracking-widest">Service Offerings</h2>
-            <div class="w-20 h-1.5 bg-blue-600 mx-auto mt-4 rounded-full"></div>
-        </div>
+    <section id="connect" class="py-24 bg-slate-900 overflow-hidden relative">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-blue-600/20 rounded-full blur-[120px]"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px]"></div>
 
-        <div class="grid md:grid-cols-3 gap-8">
-            <div class="group p-10 bg-white rounded-3xl shadow-sm border border-gray-100 transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
-                <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-blue-200 group-hover:scale-110 transition-transform">
-                    <i class="fa-solid fa-clipboard-check text-3xl text-white"></i>
-                </div>
-                <h3 class="text-2xl font-bold mb-4 text-slate-800">Auditing Services</h3>
-                <ul class="text-gray-500 space-y-3 font-medium">
-                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full"></span> Mystery & Quality Audits</li>
-                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full"></span> Compliance & Retail Audits</li>
-                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full"></span> Warehouse & Stock Verification</li>
-                </ul>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-4xl mx-auto text-center mb-16">
+                <h2 class="text-4xl font-black text-white mb-4">Connect with SE Core</h2>
+                <p class="text-gray-400">Reach out to South India's top auditing firm for business solutions.</p>
             </div>
 
-            <div class="group p-10 bg-white rounded-3xl shadow-sm border border-gray-100 transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
-                <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-blue-200 group-hover:scale-110 transition-transform">
-                    <i class="fa-solid fa-layer-group text-3xl text-white"></i>
-                </div>
-                <h3 class="text-2xl font-bold mb-4 text-slate-800">Visual Merchandise</h3>
-                <ul class="text-gray-500 space-y-3 font-medium">
-                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full"></span> End-to-End Branding Setup</li>
-                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full"></span> Strategic Brand Promotion</li>
-                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full"></span> Retail Layouts & POSM Deployment</li>
-                </ul>
-            </div>
-
-            <div class="group p-10 bg-white rounded-3xl shadow-sm border border-gray-100 transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
-                <div class="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center mb-8 shadow-lg shadow-blue-200 group-hover:scale-110 transition-transform">
-                    <i class="fa-solid fa-user-tie text-3xl text-white"></i>
-                </div>
-                <h3 class="text-2xl font-bold mb-4 text-slate-800">Man Power</h3>
-                <ul class="text-gray-500 space-y-3 font-medium">
-                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full"></span> Contractual Staffing Services</li>
-                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full"></span> Full-Time Resource Management</li>
-                    <li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-blue-600 rounded-full"></span> Field Deployment Teams</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
-
-    <section id="join" class="py-16 bg-white">
-        <div class="container mx-auto px-6 flex flex-col md:flex-row gap-12 max-w-6xl">
-            <div class="md:w-1/2">
-                <h2 class="text-3xl font-extrabold mb-4 uppercase">Connect</h2>
-                <div class="w-12 h-1 bg-blue-600 mb-6"></div>
-                
-                <div class="p-6 bg-blue-50 rounded-xl border border-blue-100 shadow-sm">
-                    <h4 class="font-bold text-gray-900 mb-1">📍 Ameerpet Office</h4>
-                    <p class="text-sm text-gray-600 mb-4">6th Floor, Vasavi MPM Grand, Hyderabad - 500038</p>
-                    <a href="https://maps.app.goo.gl/9ub2xjmxjPb9j3Ey9?g_st=ac" target="_blank" class="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-bold shadow hover:bg-blue-700 transition">
-                        <i class="fa-solid fa-location-arrow"></i> Directions
-                    </a>
-                </div>
-            </div>
-
-            <div class="md:w-1/2 w-full bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
-                <form id="registration-form" class="space-y-4">
-                    <input type="text" name="Name" placeholder="Full Name" required class="reg-input">
-                    <input type="tel" name="Contact" placeholder="Contact Number" required class="reg-input">
-                    <div class="grid grid-cols-2 gap-4">
-                        <input type="text" name="City" placeholder="City" required class="reg-input">
-                        <select name="State" required class="reg-input bg-white text-gray-500">
-                            <option value="" disabled selected>State</option>
-                            <option value="Telangana">Telangana</option>
-                            <option value="Andhra Pradesh">Andhra Pradesh</option>
-                            <option value="Karnataka">Karnataka</option>
-                            <option value="Tamil Nadu">Tamil Nadu</option>
-                            <option value="Kerala">Kerala</option>
-                        </select>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+                <a href="https://chat.whatsapp.com/EMV88JBrXV50OKJ91sHhhg" target="_blank" class="p-8 bg-white/5 border border-white/10 rounded-3xl hover:bg-white/10 hover:border-blue-500/50 transition group">
+                    <div class="w-14 h-14 bg-green-500/20 rounded-2xl flex items-center justify-center text-green-500 mb-6 group-hover:scale-110 transition">
+                        <i class="fa-brands fa-whatsapp text-3xl"></i>
                     </div>
-                    <select name="Role" required class="reg-input bg-white text-gray-500">
-                        <option value="" disabled selected>Purpose</option>
-                        <option value="Enquiry">Business Enquiry</option>
-                      
-                        <option value="Freelancer">Join as Freelancer</option>
-                    </select>
-                    <button type="submit" id="submit-btn" style="display:none;" class="w-full bg-secore-blue text-white font-bold py-3 rounded-xl shadow hover:bg-blue-800 transition uppercase tracking-widest">Submit</button>
-                    <p id="status-message" class="text-center text-xs font-bold mt-2"></p>
-                </form>
+                    <h4 class="text-white font-bold text-lg mb-2">Join Freelancer Network</h4>
+                    <p class="text-gray-500 text-sm">Join our field auditing community in South India.</p>
+                </a>
+
+                <a href="mailto:Shiva@secore.in" class="p-8 bg-white/5 border border-white/10 rounded-3xl hover:bg-white/10 hover:border-blue-500/50 transition group">
+                    <div class="w-14 h-14 bg-blue-500/20 rounded-2xl flex items-center justify-center text-blue-500 mb-6 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-envelope text-2xl"></i>
+                    </div>
+                    <h4 class="text-white font-bold text-lg mb-2">Business Enquiry</h4>
+                    <p class="text-gray-500 text-sm">Professional auditing solutions for your brand.</p>
+                </a>
+
+                <a href="https://maps.app.goo.gl/9ub2xjmxjPb9j3Ey9?g_st=ac" target="_blank" class="p-8 bg-white/5 border border-white/10 rounded-3xl hover:bg-white/10 hover:border-blue-500/50 transition group md:col-span-2 lg:col-span-1">
+                    <div class="w-14 h-14 bg-red-500/20 rounded-2xl flex items-center justify-center text-red-500 mb-6 group-hover:scale-110 transition">
+                        <i class="fa-solid fa-location-dot text-2xl"></i>
+                    </div>
+                    <h4 class="text-white font-bold text-lg mb-2">Ameerpet Head Office</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">Vasavi MPM Grand, 6th Floor, Hyderabad.</p>
+                </a>
             </div>
         </div>
     </section>
 
-    <footer class="bg-[#011c2e] text-gray-400 pt-12 pb-8">
-        <div class="container mx-auto px-6 grid md:grid-cols-3 gap-12 border-b border-gray-800 pb-8">
-            <div>
-                <h3 class="text-white font-bold mb-3 uppercase">SE CORE</h3>
-                <p class="text-xs">South India's premier firm for auditing and retail manpower deployment.</p>
+    <footer class="bg-slate-950 text-gray-500 py-12 border-t border-white/5">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-xs uppercase tracking-[0.5em] mb-4">© 2026 SE CORE SOLUTIONS | HYDERABAD</p>
+            <div class="flex justify-center space-x-6 text-sm">
+                <a href="#about" class="hover:text-white transition">About</a>
+                <a href="#services" class="hover:text-white transition">Services</a>
+                <a href="mailto:Shiva@secore.in" class="hover:text-white transition">Contact</a>
             </div>
-            <div>
-                <h3 class="text-white font-bold mb-3 uppercase">Links</h3>
-                <ul class="space-y-2 text-xs">
-                    <li><a href="#about" class="hover:text-white transition">About</a></li>
-                    <li><a href="#services" class="hover:text-white transition">Services</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="text-white font-bold mb-3 uppercase">Contact</h3>
-                <div class="space-y-2 text-xs">
-                    <p>+91 98669 05621</p>
-                    <a href="https://maps.app.goo.gl/9ub2xjmxjPb9j3Ey9?g_st=ac" target="_blank" class="text-blue-400 hover:underline">Ameerpet, Hyderabad</a>
-                </div>
-            </div>
-        </div>
-        <div class="text-center mt-8 opacity-20 text-[8px] tracking-[0.5em]">
-            © 2026 SE CORE. ALL RIGHTS RESERVED.
         </div>
     </footer>
 
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbzDl_vFKt_T7RtdNa6lYjINlrqH64dSLNKVArkL2wBx_FS_qKJmDWWEN3cwa1elp5BzkQ/exec';
-        const form = document.getElementById('registration-form');
-        const submitBtn = document.getElementById('submit-btn');
-        const statusMsg = document.getElementById('status-message');
-        const requiredInputs = form.querySelectorAll('input[required], select[required]');
+    <a href="https://api.whatsapp.com/send/?phone=%2B919866905621&text&type=phone_number&app_absent=0" target="_blank" class="wa-float">
+        <i class="fa-brands fa-whatsapp text-2xl"></i>
+        <span class="font-bold">Chat with Expert</span>
+    </a>
 
-        // Particles
-        const canvas = document.getElementById('hero-canvas');
+    <script>
+        const canvas = document.getElementById('particle-canvas');
         const ctx = canvas.getContext('2d');
         let particles = [];
-        function resize() { canvas.width = window.innerWidth; canvas.height = 280; }
-        window.addEventListener('resize', resize); resize();
+        let mouse = { x: null, y: null, radius: 150 };
+
+        function resize() {
+            canvas.width = window.innerWidth;
+            canvas.height = 500;
+        }
+        window.addEventListener('resize', resize);
+        window.addEventListener('mousemove', (e) => {
+            const rect = canvas.getBoundingClientRect();
+            mouse.x = e.clientX - rect.left;
+            mouse.y = e.clientY - rect.top;
+        });
+
+        resize();
 
         class Particle {
-            constructor() { 
-                this.x = Math.random() * canvas.width; 
-                this.y = Math.random() * canvas.height; 
-                this.size = Math.random() * 1.2; 
-                this.speedX = Math.random() * 0.3 - 0.15; 
-                this.speedY = Math.random() * 0.3 - 0.15; 
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2;
+                this.baseX = this.x;
+                this.baseY = this.y;
+                this.density = (Math.random() * 30) + 1;
             }
-            update() { this.x += this.speedX; this.y += this.speedY; if (this.x > canvas.width) this.x = 0; if (this.y > canvas.height) this.y = 0; }
-            draw() { ctx.fillStyle = 'rgba(255, 255, 255, 0.4)'; ctx.beginPath(); ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2); ctx.fill(); }
+            draw() {
+                ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+            update() {
+                let dx = mouse.x - this.x;
+                let dy = mouse.y - this.y;
+                let distance = Math.sqrt(dx*dx + dy*dy);
+                let forceDirectionX = dx / distance;
+                let forceDirectionY = dy / distance;
+                let maxDistance = mouse.radius;
+                let force = (maxDistance - distance) / maxDistance;
+                let directionX = forceDirectionX * force * this.density;
+                let directionY = forceDirectionY * force * this.density;
+
+                if (distance < mouse.radius) {
+                    this.x -= directionX;
+                    this.y -= directionY;
+                } else {
+                    if (this.x !== this.baseX) { this.x -= (this.x - this.baseX)/10; }
+                    if (this.y !== this.baseY) { this.y -= (this.y - this.baseY)/10; }
+                }
+            }
         }
-        function init() { for (let i = 0; i < 40; i++) particles.push(new Particle()); }
-        function animate() { ctx.clearRect(0, 0, canvas.width, canvas.height); particles.forEach(p => { p.update(); p.draw(); }); requestAnimationFrame(animate); }
-        init(); animate();
 
-        // Form Validation
-        form.addEventListener('input', () => {
-            let allFilled = true;
-            requiredInputs.forEach(input => { if (!input.value.trim()) allFilled = false; });
-            submitBtn.style.display = allFilled ? 'block' : 'none';
-        });
+        function init() {
+            particles = [];
+            for (let i = 0; i < 100; i++) particles.push(new Particle());
+        }
 
-        // Form Submit
-        form.addEventListener('submit', e => {
-            e.preventDefault();
-            submitBtn.disabled = true;
-            submitBtn.innerText = "Sending...";
-            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-                .then(response => {
-                    statusMsg.innerText = "Success!";
-                    statusMsg.classList.add('text-green-500');
-                    form.reset();
-                })
-                .catch(error => {
-                    statusMsg.innerText = "Error, please try again.";
-                    statusMsg.classList.add('text-red-500');
-                    submitBtn.disabled = false;
-                })
-        });
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => { p.draw(); p.update(); });
+            connect();
+            requestAnimationFrame(animate);
+        }
+
+        function connect() {
+            for (let a = 0; a < particles.length; a++) {
+                for (let b = a; b < particles.length; b++) {
+                    let dx = particles[a].x - particles[b].x;
+                    let dy = particles[a].y - particles[b].y;
+                    let distance = Math.sqrt(dx*dx + dy*dy);
+                    if (distance < 100) {
+                        ctx.strokeStyle = `rgba(59, 130, 246, ${1 - distance/100})`;
+                        ctx.lineWidth = 0.5;
+                        ctx.beginPath(); ctx.moveTo(particles[a].x, particles[a].y);
+                        ctx.lineTo(particles[b].x, particles[b].y); ctx.stroke();
+                    }
+                }
+            }
+        }
+
+        init();
+        animate();
     </script>
 </body>
 </html>
